@@ -1,0 +1,41 @@
+<section id="hero-1" class="bg--scroll hero-section" style="background: linear-gradient(0deg, #f7478024, rgb(0 0 0 / 60%)), url({{bannerimage}});">
+    <div class="container-fluid" style="padding: 30px 55px;">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8" data-aos="fade-left">
+                <div class="hero-1-txt color--white">
+                    <h2 class="s-48 w-700">{{ bannerheading }}</h2>
+                    <p>{{ bannerpara }}</p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-right" *ngIf="displayForm">
+                <form name="signinform" class="row sign-in-form" style="padding: 10px;">
+                    <!-- Login Separator -->
+                    <div class="col-md-12 text-center">
+                        <div class="separator-line"><p class="s-24 color--black" style="margin-bottom: 6px;">Meet a designer</p></div>
+                    </div>
+                
+                    <!-- Form Input -->
+                    <div class="col-md-12" style="margin-bottom: 10px;">
+                        <p class="p-sm input-header" style="margin-bottom: 5px;">Name</p>
+                        <input class="form-control email" type="text" name="email" placeholder="Praveen Kumar" />
+                    </div>
+                    <!-- Form Input -->
+                    <div class="col-md-12" style="margin-bottom: 10px;">
+                        <p class="p-sm input-header" style="margin-bottom: 5px;">Phone No</p>
+                        <input class="form-control email" type="phone" name="email" placeholder="+91 89898 98990" />
+                    </div>
+                    <!-- Form Input -->
+                    <div class="col-md-12"style="margin-bottom: 10px;" >
+                        <p class="p-sm input-header" style="margin-bottom: 5px;">Email address</p>
+                        <input class="form-control email" type="email" name="email" placeholder="example@example.com" />
+                    </div>
+                
+                    <!-- Form Submit Button -->
+                    <div class="col-md-12" style="margin-bottom: 10px;">
+                        <button type="submit" class="btn btn--theme hover--theme submit">Get Free Estimate</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

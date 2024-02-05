@@ -1,0 +1,100 @@
+<footer id="footer-3" class="footer" data-aos="zoom-in" data-aos-easing="linear" style="background-image: url('https://ik.imagekit.io/habitro/bg/footer-bg.png?updatedAt=1707132870706');" >
+    <div class="container-fluid" >
+        <div class="row" *ngIf="company.length > 0">
+            <div class="col-xl-4 col-md-4 col-sm-12 col-xs-12" style="border-right: 1px solid #e2e2e2; padding: 0px;">
+                <div class="footer-info" style="margin-bottom: 40px;">
+                    <img class="footer-logo" src="{{ company[1].content}}" alt="footer-logo" />
+                    <p class="s-18 w-400" style="color: #6c757d;">
+                        <i class="fa-solid fa-location-dot color-primary"></i>&nbsp;&nbsp;{{ company[3].content}}
+                        <span style="color: brown;">Landmark: </span>Next to KFC & Above Levis Showroom
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12" style="padding: 0px;">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="footer-links fl-1">
+                            <h6 class="s-17 w-700">Sitemap</h6>
+        
+                            <ul class="foo-links clearfix">
+                                <li>
+                                    <p><a href="">About Us</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="legal-information">Legal Information</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="blogs">Our Blog</a></p>
+                                </li>
+                                <li>
+                                    <p><a href="contact">Contact Us</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12" >
+                        <div class="footer-links fl-2" >
+                            <h6 class="s-17 w-700">Service</h6>
+        
+                            <ul class="foo-links clearfix">
+                                <li *ngFor="let menu of menu">
+                                    <p><a href="{{ menu.slug }}">{{ menu.menu}}</a></p>
+                                </li>
+                            </ul>
+                        </div>        
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="footer-info" style="border-bottom: none;" >
+                            <h6 class="s-17 w-700">Contact</h6>
+                            <ul class="mb-30">
+                                <li >
+                                    <a href="tel:{{ company[4].content }}">
+                                        <i class="fa-solid fa-phone color-primary"></i>&nbsp;&nbsp;{{ company[4].content }}
+                                    </a>
+                                </li>
+                                <li >
+                                    <a href="mailto:{{ company[2].content }}">
+                                        <i class="fa-solid fa-envelope color-primary"></i>&nbsp;&nbsp;{{ company[2].content }}
+                                    </a>
+                                </li>
+                            </ul>
+                                                        
+                            <ul class="footer-socials ico-30" >
+                                <li>
+                                    <a href="{{ company[5].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/facebook.png" width="32px" /></a>
+                                </li>
+                                <li>
+                                    <a href="{{ company[6].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/instagram.png" width="32px" /></a>
+                                </li>
+                                <li>
+                                    <a href="{{ company[7].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/linkedin.png" width="32px" /></a>
+                                </li>
+                                <li>
+                                    <a href="{{ company[8].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/youtube.png" width="32px" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>                    
+                </div>
+                
+            </div>
+        </div>
+        <hr />
+        <div class="bottom-footer" style="padding: 10px 40px">
+            <div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
+                <div class="col">
+                    <div class="footer-copyright">
+                        <p class="p-sm">&#169; {{copyrightNotice}} Habitro. All Rights Reserved</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="bottom-secondary-link ico-15 text-end">
+                        <p class="p-sm">Designed and Developed by<a href="https://godparticles.in/" target="_blank" style="color: teal; font-size: 17px;">&nbsp;God Particles</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

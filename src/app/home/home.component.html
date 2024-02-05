@@ -1,0 +1,189 @@
+<app-banner
+    [bannerheading]="bannerheading"
+    [bannerpara]="bannerpara"
+    [bannerimage]="bannerimage"
+    [displayForm]="displayForm"
+></app-banner>
+<!-- About Section -->
+<section id="lnk-2" class="bg--white-400 ct-04 content-section division">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 py-30 order-md-2" data-aos="fade-left">
+                <div class="txt-block left-column">
+                    <h2 class="mb-0 s-38 w-600">About Habitro</h2>
+                    <p>We, at Habitro, are a team of three certified architects & designers, based in Chennai, tracing our relationships back to our college days.</p>
+                    <div class="cbox-2 process-step">
+                        <div class="ico-wrap">
+                            <div class="cbox-2-ico bg--theme color--white">1</div>
+                            <span class="cbox-2-line"></span>
+                        </div>
+                        <div class="cbox-2-txt">
+                            <h5 class="s-20 w-600">Building Your Big & Bold Dreams</h5>
+                            <p>We are your personal construction concierges, hand-picking eco-friendly and sustainable materials to lay the foundations for your better, trendier living.</p>
+                        </div>
+                    </div>
+                    <div class="cbox-2 process-step">
+                        <div class="ico-wrap">
+                            <div class="cbox-2-ico bg--theme color--white">2</div>
+                            <span class="cbox-2-line"></span>
+                        </div>
+                        <div class="cbox-2-txt">
+                            <h5 class="s-20 w-600">Constructing Tomorrow’s World</h5>
+                            <p>
+                                We strive to make Habitro a global construction stardom, by reshaping the essence of work and living spaces. Being the architects of tomorrow, we aim to hammer and chisel today’s world into something
+                                extraordinary.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cbox-2 process-step">
+                        <div class="ico-wrap">
+                            <div class="cbox-2-ico bg--theme color--white">3</div>
+                        </div>
+                        <div class="cbox-2-txt">
+                            <h5 class="s-20 w-600">Transparent & Rock-Solid Foundations</h5>
+                            <p class="mb-0">We blend our concrete with Transparency and reinforce it with Quality & Trust. With this, we construct enduring relationships with you; like a fine wine, we get better with time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-2" data-aos="fade-right">
+                <div class="img-block">
+                    <img class="img-fluid" src="https://ik.imagekit.io/habitro/about-habitro.jpg?updatedAt=1706606620928" alt="content-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Service Section -->
+<section id="faqs-4" class="gr--whitesmoke pt-50 pb-50 faqs-section division">
+    <div class="container" data-aos="zoom-in">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-9">
+                <div class="inner-page-title">
+                    <h2 class="s-38 w-600 color--white">What We Do Best</h2>
+                    <div class="bottom-line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tabs-nav tabs--theme clearfix">
+                    <ul class="tabs-1">
+                        <!-- TAB-1 LINK -->
+                        <li class="tab-link current r-16" data-tab="residential">
+                            <p>Residential</p>
+                        </li>
+                        <!-- TAB-2 LINK -->
+                        <li class="tab-link r-16" data-tab="commercial">
+                            <p>Commercial</p>
+                        </li>
+                        <!-- TAB-3 LINK -->
+                        <li class="tab-link r-16" data-tab="construction">
+                            <p>Construction</p>
+                        </li>
+                        <!-- TAB-4 LINK -->
+                        <li class="tab-link r-16" data-tab="renovation">
+                            <p>Renovation</p>
+                        </li>
+                        <!-- TAB-All LINK -->
+                        <!--li class="tab-link r-16" data-tab="all">
+                            <p>All</p>
+                        </li-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tabs-content">
+            <div class="row justify-content-center">
+                <div class="col-xl-12">
+                    <div id="residential" class="tab-content current" data-aos="zoom-in" data-aos-duration="3000">
+                        <div class="row">
+                            <div class="col-md-2 col-4" *ngFor="let item of service | filter: 'residential' :'data_filter'">
+                                <div class="ico-50 r-25" style="text-align: center;">
+                                    <img class="img-fluid" src="assets/images/icons/{{item.image}}" alt="habitro-service" />
+                                    <p>{{item.service_name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="commercial" class="tab-content">
+                        <div class="row">
+                            <div class="col-md-2 col-4" *ngFor="let item of service | filter: 'commercial'  :'data_filter'">
+                                <div class="ico-50 r-25" style="text-align: center;">
+                                    <img class="img-fluid" src="assets/images/icons/{{item.image}}" alt="habitro-service" />
+                                    <p>{{item.service_name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="construction" class="tab-content">
+                        <div class="row">
+                            <div class="col-md-2 col-4" *ngFor="let item of service | filter: 'construction'  :'data_filter'">
+                                <div class="ico-50 r-25" style="text-align: center;">
+                                    <img class="img-fluid" src="assets/images/icons/{{item.image}}" alt="habitro-service" />
+                                    <p>{{item.service_name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="renovation" class="tab-content">
+                        <div class="row">
+                            <div class="col-md-2 col-4" *ngFor="let item of service | filter: 'renovation'  :'data_filter'">
+                                <div class="ico-50 r-25" style="text-align: center;">
+                                    <img class="img-fluid" src="assets/images/icons/{{item.image}}" alt="habitro-service" />
+                                    <p>{{item.service_name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="all" class="tab-content">
+                        <div class="row">
+                            <div class="col-md-2 col-4" *ngFor="let item of service">
+                                <div class="ico-50 r-25" style="text-align: center;">
+                                    <img class="img-fluid" src="assets/images/icons/{{item.image}}" alt="habitro-service" />
+                                    <p>{{item.service_name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section
+    id="reviews-1"
+    class="pt-50 pb-50 shape--06 shape--gr-whitesmoke reviews-section"
+    style="background-color: #7851a93b; background-image: url(https://ik.imagekit.io/habitro/bg/testimonials-bg.png?updatedAt=1707132693702); background-position: bottom right; background-repeat: no-repeat;"
+>
+    <div class="container">
+        <!-- SECTION TITLE -->
+        <div class="row justify-content-center" data-aos="zoom-in">
+            <div class="col-md-10 col-lg-9">
+                <div class="inner-page-title">
+                    <a class="video-popup1" href="#"><h2 class="s-38 w-600">Hear From Our Clients</h2></a>
+                    <div class="bottom-line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <owl-carousel-o [options]="customOptions">
+                <ng-container *ngFor="let item of testimonials">
+                    <ng-template carouselSlide>
+                        <div class="img-block video-preview" data-aos="zoom-in">
+                            <a class="video-popup1" [href]="item.video">
+                                <img class="img-fluid" [src]="item.thumbnail || 'assets/images/test/1.svg'" alt="video-preview" style="margin-bottom: 10px;" />
+                                <p style="font-style: italic; line-height: 20px; padding: 10px;">"{{ item.name }}"</p>
+                                <h6 style="padding-bottom: 10px;">{{ item.company }}</h6>
+                            </a>
+                        </div>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>
+<app-calltoaction [copyhead]="copyhead"></app-calltoaction>
+
+

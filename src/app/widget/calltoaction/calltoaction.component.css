@@ -1,0 +1,27 @@
+@media screen and (max-width: 768px) {
+    /* Adjust the animation or element properties for mobile screens */
+    [data-aos="fade-right"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1; /* Ensure the element is visible */
+      transform: none; /* Remove any transformation */
+    }
+    [data-aos="fade-left"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1; /* Ensure the element is visible */
+      transform: none; /* Remove any transformation */
+    }
+    [data-aos="zoom-in"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1; /* Ensure the element is visible */
+      transform: none; /* Remove any transformation */
+    }
+  }
+.btn--tra-white, .hover--tra-white:hover {
+  color: black !important;
+  background-color: transparent!important;
+  border-color: black!important;
+}
+.banner-3-wrapper .banner-overlay {
+  padding: 75px;
+}
+

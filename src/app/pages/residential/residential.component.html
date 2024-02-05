@@ -1,0 +1,25 @@
+<app-banner [bannerheading]="bannerheading" [bannerpara]="bannerpara" [bannerimage]="bannerimage" [displayForm]="displayForm"></app-banner>
+<div class="section">
+    <div class="box-container">
+        <div class="box-item" *ngFor="let item of cardreveal">
+            <div class="flip-box">
+                <div class="flip-box-front text-center" style="background-image: url('{{item.image}}')">
+                    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+                    <div class="inner color-white">
+                        <h3 class="flip-box-header color-white">{{item.content}}</h3>
+                        <p>{{item.descripition}}</p>
+                        <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img" />
+                    </div>
+                </div>
+                <div class="flip-box-back text-center" style="background-color: gray;">
+                    <div class="inner color-white">
+                        <h3 class="flip-box-header">Loremsum Content</h3>
+                        <p>A short sentence describing this callout is.</p>
+                        <a href="contact" class="flip-box-button">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-calltoaction [copyhead]="copyhead"></app-calltoaction>

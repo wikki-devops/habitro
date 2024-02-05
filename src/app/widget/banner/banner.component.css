@@ -1,0 +1,70 @@
+.faqs-section .tabs-1 li p{
+    margin-top: 0px;
+    color: #000;
+  }
+  .in_tool_logo{
+    margin: 0px;
+    padding: 20px;
+  }
+  
+  @media only screen and (max-width: 490px) {
+    #hero-1 {
+      padding-top: 20px !important;
+    }
+    .signinform{
+      padding: 100px !important;
+    }
+    .ico-80 img {
+      width: 40px !important;
+      height: 40px !important;
+    }
+    .tab-content p{
+      padding: 20px 0px;
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 500;
+      color: #343a40;
+    }
+    .container-fluid{
+      padding: 30px 10px !important;
+    }
+  }
+  
+  /* form */
+  
+  .input-group{
+    margin: 10px;
+  }
+  
+  .form-control::placeholder {
+    color: rgb(204, 201, 201);
+    opacity: 5;
+  }
+  .hero-section p.p-sm{
+    margin: 4px 0px;
+  }
+  .btn--theme {
+    color: #fff!important;
+    border-color: #f74780!important;
+    background-color: #f74780!important;
+    width: 100%;
+    margin: 20px 0px;
+  }
+  .faqs-section .tabs-1 li p{
+  margin-top: 0px;
+  color: #000;
+  }
+  .in_tool_logo{
+  margin: 0px;
+  padding: 20px;
+  }
+  .sign-in-form{
+  background-color: white; margin: 10px;
+  box-shadow: -1.21px 6.894px 15px 0px rgba(0, 0, 0, 0.07);
+  }
+  .sign-in-form{
+  margin: 0px !important;
+  }
+  .hero-section p.s-24 {
+  margin-bottom: 6px !important;
+  }

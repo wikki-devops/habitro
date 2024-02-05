@@ -1,0 +1,41 @@
+.integrations-1-wrapper .in_tool {
+    display: block !important;
+    text-align: center !important;
+  }
+  .integrations-1-wrapper .in_tool-logo {
+    margin-right: 0px;
+    padding: 20px;
+  }
+  .in_tool-txt p {
+    padding: 20px;
+  }
+  
+  /* CSS Media Query for Mobile Devices */
+  @media screen and (max-width: 768px) {
+    /* Adjust the animation or element properties for mobile screens */
+    [data-aos="fade-right"] {
+        /* For example, you might change the animation to fade in without the right movement */
+        opacity: 1; /* Ensure the element is visible */
+        transform: none; /* Remove any transformation */
+    }
+    [data-aos="fade-up"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1; /* Ensure the element is visible */
+      transform: none; /* Remove any transformation */
+  }
+    [data-aos="fade-left"] {
+        /* For example, you might change the animation to fade in without the right movement */
+        opacity: 1; /* Ensure the element is visible */
+        transform: none; /* Remove any transformation */
+    }
+    [data-aos="zoom-in"] {
+        /* For example, you might change the animation to fade in without the right movement */
+        opacity: 1; /* Ensure the element is visible */
+        transform: none; /* Remove any transformation */
+    }
+  }
+  
+  .in_tool {
+    box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.11);
+  }
+  

@@ -1,0 +1,93 @@
+<app-banner [bannerheading]="bannerheading" [bannerpara]="bannerpara" [bannerimage]="bannerimage" [displayForm]="displayForm"></app-banner>
+<section
+    id="projects-1"
+    class="pt-50 pb-50 projects-section">
+    <div class="container">
+        <div class="projects-wrapper">
+            <div class="row align-items-center row-cols-1 row-cols-md-2">
+                <!-- PROJECT #1 -->
+                <div class="col-lg-6 col-md-6" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500" *ngFor="let item of renovation">
+                    <div class="project-details">
+                        <div class="project-preview" style="box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.11);">
+                            <!-- Project Preview -->
+                            <img-comparison-slider>
+                                <img slot="first" src="{{item.first}}" width="100%" />
+                                <img slot="second" src="{{item.second}}" width="100%" />
+                            </img-comparison-slider>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PROJECT #1 -->
+            </div>
+        </div>
+    </div>
+</section>
+<section id="integrations-1" class="integrations-section pt-50 pb-50" style="background-color: #f5f5f5; background-image: url(https://ik.imagekit.io/habitro/bg/renovation-bg.jpg?updatedAt=1707132773508); background-position: top center; background-repeat: no-repeat;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-9">
+                <div class="inner-page-title">
+                    <h2 class="s-38 w-600">We Renovate With Care</h2>
+                    <div class="bottom-line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="integrations-1-wrapper">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 rows-2">
+                <!-- TOOL #1 -->
+                <div class="col-md-4 col-lg-4" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                    <div class="in_tool it-1 r-12 mb-30">
+                        <!-- Icon -->
+                        <div class="in_tool-logo-wrap">
+                            <div class="in_tool-logo ico-60">
+                                <img class="img-fluid" src="assets/images/1.png" alt="brand-logo" />
+                            </div>
+                        </div>
+
+                        <!-- Text -->
+                        <div class="in_tool-txt">
+                            <h6 class="s-20 w-700">Mindful Makeovers
+                            </h6>
+                            <p class="p-sm">We renovate while preserving your existing structures, ensuring all necessary safety measures.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2000">
+                    <div class="in_tool it-1 r-12 mb-30">
+                        <!-- Icon -->
+                        <div class="in_tool-logo-wrap">
+                            <div class="in_tool-logo ico-60">
+                                <img class="img-fluid" src="assets/images/1.png" alt="brand-logo" />
+                            </div>
+                        </div>
+
+                        <!-- Text -->
+                        <div class="in_tool-txt">
+                            <h6 class="s-20 w-700">Silent and Squeaky Clean 
+                            </h6>
+                            <p class="p-sm">We renovate clean & quiet, without any jarring sounds, and prioritise hygiene for a spotless renovation experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2500">
+                    <div class="in_tool it-1 r-12 mb-30">
+                        <!-- Icon -->
+                        <div class="in_tool-logo-wrap">
+                            <div class="in_tool-logo ico-60">
+                                <img class="img-fluid" src="assets/images/1.png" alt="brand-logo" />
+                            </div>
+                        </div>
+
+                        <!-- Text -->
+                        <div class="in_tool-txt">
+                            <h6 class="s-20 w-700">Frugal and Fabulous </h6>
+                            <p class="p-sm">We offer wallet-friendly renovations, paving the way for savings to further beautify your space.<br><br></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END FEATURE BOX #1 -->
+            </div>
+        </div>
+    </div>
+</section>
+<app-calltoaction [copyhead]="copyhead"></app-calltoaction>

@@ -1,0 +1,31 @@
+/* CSS Media Query for Mobile Devices */
+@media screen and (max-width: 490px) {
+    /* Adjust the animation or element properties for mobile screens */
+    [data-aos="fade-right"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1; /* Ensure the element is visible */
+      transform: none; /* Remove any transformation */
+    }
+    [data-aos="fade-left"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1; /* Ensure the element is visible */
+      transform: none; /* Remove any transformation */
+    }
+    [data-aos="zoom-in"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1; /* Ensure the element is visible */
+      transform: none; /* Remove any transformation */
+    }
+    .section-title h2{
+        font-size: 28px !important;
+        text-align: left;
+    }
+    .section-title p{
+        text-align: left;
+        padding: 0px !important;
+    }
+    .bottom-line{
+        margin: 2px !important; width: 100px;
+    }
+  }
+    

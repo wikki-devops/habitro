@@ -1,0 +1,97 @@
+/* Styles for each team member */
+.team-member-data {
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Example shadow values */
+    top: -60px;
+    margin: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.team-member-data h6{
+    padding: 10px;
+    background-color: #7851A9;
+    color: #ffffff;
+}
+
+.team-member-data p{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+    padding: 0px 10px;
+    line-height: 24px;
+}
+/* Content visibility */
+.color--grey {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.9s ease-out;
+}
+
+.show-content .color--grey {
+    max-height: 250px; /* Adjust this value to fit your content height */
+}
+
+/* Hover effect */
+.team-member-data::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    z-index: -1;
+    transition: all .4s ease;
+    opacity: 0;
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+.team-member:hover .team-member-data::before {
+    opacity: 1;
+}
+.inner-page-hero {
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust the animation or element properties for mobile screens */
+    [data-aos="fade-right"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1; /* Ensure the element is visible */
+      transform: none; /* Remove any transformation */
+    }
+    [data-aos="fade-left"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1; /* Ensure the element is visible */
+      transform: none; /* Remove any transformation */
+    }
+    [data-aos="zoom-in"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1; /* Ensure the element is visible */
+      transform: none; /* Remove any transformation */
+    }
+    .team-members-wrapper{
+      max-height: fit-content !important;
+    }
+    .team-member{
+      min-height: fit-content !important;
+    }
+  }
+
+  .video-preview {
+    background-color: white;
+    box-shadow: -1.21px 6.894px 15px 0px rgba(0, 0, 0, 0.07);
+    margin: 10px;
+  }
+
+.video-btn-sm {
+    width: 4.375rem;
+    height: 4.375rem;
+    margin-top: -2.187rem;
+    margin-left: -2.1875rem;
+  }
+  .team-members-wrapper{
+    max-height: 680px;
+  }

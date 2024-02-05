@@ -1,0 +1,10 @@
+.desktoplogo img {
+    max-height: 68px !important;
+}
+.tra-menu .wsmainfull {
+    padding: 20px 50px !important;
+}
+
+.tra-menu.white-scroll .wsmainfull.scroll {
+    padding: 0px 50px !important;
+}
