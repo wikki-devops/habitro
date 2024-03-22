@@ -17,25 +17,6 @@ p{
     margin: auto;
   }
   
-  @media screen and (max-width: 768px) {
-    /* Adjust the animation or element properties for mobile screens */
-    [data-aos="fade-right"] {
-      /* For example, you might change the animation to fade in without the right movement */
-      opacity: 1; /* Ensure the element is visible */
-      transform: none; /* Remove any transformation */
-    }
-    [data-aos="fade-left"] {
-      /* For example, you might change the animation to fade in without the right movement */
-      opacity: 1; /* Ensure the element is visible */
-      transform: none; /* Remove any transformation */
-    }
-    [data-aos="zoom-in"] {
-      /* For example, you might change the animation to fade in without the right movement */
-      opacity: 1; /* Ensure the element is visible */
-      transform: none; /* Remove any transformation */
-    }
-  }
-  
   a:hover {
     color: #fff !important;
     text-decoration: none;
@@ -84,7 +65,7 @@ p{
   
   .example-accordion-item-header:hover {
     cursor: pointer;
-    background-color: #82a951;
+    background-color: #7851A9 !important;
     color: white !important;
   }
   

@@ -2330,11 +2330,9 @@ p.video-txt-sm {
 
 
 .loader {
-  border: 2px solid;
-  border-color: transparent #888;
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 25%;
   display: inline-block;
   position: relative;
   box-sizing: border-box;
@@ -4917,6 +4915,7 @@ h5.h5-title {
   -o-transition: all 450ms ease-in-out;
   -ms-transition: all 450ms ease-in-out;
   transition: all 450ms ease-in-out; 
+  background: #7851A9;
 }
 
 .ct-03 .cbox-2-ico {
@@ -4946,7 +4945,10 @@ h5.h5-title {
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
-
+.cbox-2:hover .cbox-2-ico{
+  border-color: #7851A9  !important;
+  color: black !important;
+}
 .cbox-2:hover .cbox-2-ico.bg--blue-500 { color: #185abd; border-color: #185abd; }
 .cbox-2:hover .cbox-2-ico.bg--blue-400 { color: #1680fb; border-color: #1680fb; }
 .cbox-2:hover .cbox-2-ico.bg--blue-300 { color: #3eb1ff; border-color: #3eb1ff; }
@@ -6706,8 +6708,11 @@ p.rbox-2-txt span {
 /*------------------------------------------*/
 
 .pricing-features li {
-  padding: 11px 8px;
+  padding: 10px 18px !important;
+  border-bottom: 1px solid #7851a92e  !important;
+  list-style-type: disclosure-closed !important;
 }
+
 
 .pricing-4-table .pricing-features li {
   padding: 10px;
@@ -10925,11 +10930,11 @@ body.theme--dark {
 .color--white .color--theme { color: #f74780!important; }
 
 .loading--theme .loader { 
-  border-color: transparent #f74780; 
+  border-color: transparent #7851A9; 
 }
 
 .loading--theme .loader::after {
-  border-color: transparent rgba(247, 71, 128, .15); 
+  border-color: transparent #7851A9 ; 
 }
 
 .nav-theme .sm-info { 
@@ -10959,8 +10964,8 @@ body.theme--dark {
 
 .faqs-section .tabs--theme .tabs-1 li.current,
 .faqs-section .tabs--theme .tabs-1 li.current:hover {
-  background-color: #f74780;
-  border-color: #f74780!important;
+  background-color: #7851A9;
+  border-color: #7851A9 !important;
 }
 
 .switch-wrap input:checked + .switcher.switcher--theme { 

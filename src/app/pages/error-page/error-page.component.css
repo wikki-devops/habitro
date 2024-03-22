@@ -1,3 +1,4 @@
 .bg--white-300 {
-    top: -220px !important;
-  }
+  transform: translateY(-220px);
+  background-color: white;
+}

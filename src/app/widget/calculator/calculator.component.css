@@ -1,0 +1,134 @@
+/* Hide the default radio buttons */
+input[type="radio"] {
+    display: none !important;
+ }
+ 
+ /* Style for the custom radio buttons */
+ .radio-button {
+    display: inline-block !important;
+    margin: 5px !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    color: #505050 !important;
+    background: #fff !important;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: box-shadow 0.25s ease, background 1s ease, color 0.25s ease;
+    border-radius: 4px !important;
+    font-size: 20px !important;
+    text-align: center !important;
+    font-weight: 400 !important;
+ }
+ 
+ /* Style for the checked radio button */
+ input[type="radio"]:checked + label.radio-button {
+    border: 1px solid #7851A9 !important;
+    font-weight: 800 !important;
+    color: #7851A9 !important;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.06) !important;
+    border-color: #7851A9  !important;
+ }
+ .owm-form{
+    display: flex !important;
+    justify-content: space-evenly !important;
+    padding: 20px 50px !important;
+    flex-wrap: wrap !important;
+ }
+
+ .checkbox.style-h {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    justify-content: flex-start
+  }
+  .checkbox.style-h input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .checkbox.style-h input:checked ~ .checkbox__checkmark {
+    background-color: #7851A9;
+  }
+  .checkbox.style-h input:checked ~ .checkbox__checkmark:after {
+    opacity: 1;
+    top: -3px;
+  }
+  .checkbox.style-h input:checked ~ .checkbox__body {
+    background-position: 0 0;
+  }
+  .checkbox.style-h:hover input ~ .checkbox__checkmark {
+    background-color: #7851A9;
+  }
+  .checkbox.style-h:hover input:checked ~ .checkbox__checkmark {
+    background-color: #7851A9;
+  }
+  .checkbox.style-h:hover .checkbox__body {
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+  }
+  .checkbox.style-h .checkbox__checkmark {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    height: 22px;
+    width: 22px;
+    background-color: #82aa51;
+    transition: background-color 0.25s ease;
+    border-radius: 4px;
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.1), inset -2px -2px 4px rgba(255,255,255,0.4);
+  }
+  .checkbox.style-h .checkbox__checkmark:after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: -15px;
+    width: 10px;
+    height: 20px;
+    border: solid #fff;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.25s ease, top 0.25s ease;
+  }
+  .checkbox.style-h .checkbox__body {
+    color: #333;
+    line-height: 1.4;
+    font-size: 16px;
+    transition: font-weight 0.25s ease;
+    font-weight: bold;
+    color: #333;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    padding: 15px;
+    padding-left: 52px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: box-shadow 0.25s ease, background 1s ease, color 0.25s ease;
+  }
+  .checkboxes__row{
+    margin: 10px !important;
+  }
+    .error-message {
+    color: red;
+    font-size: small;
+  }
+  p.p-lg{
+    margin-bottom: 0px !important;
+  }
+  .contact-form .form-control, .contact-form .form-select{
+    margin-bottom: 0px !important;
+  }
+  @media only screen and (max-width: 490px) {
+    p.p-lg{
+      text-align: center !important;
+    }
+    .owm-form{
+      padding: 10px !important;
+    }
+  }

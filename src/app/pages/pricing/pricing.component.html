@@ -1,0 +1,277 @@
+<app-banner [bannerheading]="bannerheading" [bannerpara]="bannerpara"
+    [bannerimage]="bannerimage" [displayForm]="displayForm"></app-banner>
+<section id="faqs-4" class="gr--whitesmoke pt-50 pb-50 faqs-section division">
+    <div class="container">
+        <div class="tabs-nav tabs--theme clearfix">
+            <ul class="tabs-1">
+                <li class="tab-link current r-16" data-tab="1bhk">
+                    <img src="assets/images/icons/2bhk.png" width="60px"
+                        height="60px" />
+                </li>
+                <li class="tab-link r-16" data-tab="2bhk">
+                    <img src="assets/images/icons/3bhk.png" width="60px"
+                        height="60px" />
+                </li>
+                <li class="tab-link r-16" data-tab="3bhk">
+                    <img src="assets/images/icons/4bhk.png" width="60px"
+                        height="60px" />
+                </li>
+            </ul>
+        </div>
+        <div class="tabs-content py-50">
+            <div id="1bhk" class="tab-content current">
+                <div class="pricing-1-wrapper">
+                    <div class="row row-cols-1 row-cols-md-3">
+                        <div class="col-md-4" *ngIf="pricing.length > 0">
+                            <div id="pt-1-1"
+                                class="p-table pricing-1-table bg--white-100 block-shadow r-12 wow fadeInUp">
+                                <div class="pricing-table-header">
+                                    <h5
+                                        class="s-24 w-700 text-capitalize">{{pricing[0].variant}}</h5>
+                                    <div class="price">
+                                        <sup class="color--black">₹</sup>
+                                        <span
+                                            class="color--black">{{pricing[0].pricing}}</span>
+                                        
+                                        <p
+                                            class="color--grey">{{pricing[0].caption}}</p>
+                                    </div>
+                                    <a href="tel:+91 99529 37110"
+                                        class="btn r-04 btn--theme hover--tra-white"><i
+                                            class="fa-solid fa-headset"></i>&nbsp;&nbsp;Talk
+                                        to an Expert</a>
+                                </div>
+                                <ul
+                                    class="pricing-features color--black ico-10 ico--green mt-25">
+                                    <div
+                                        [innerHTML]="pricing[0].includes"></div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4" *ngIf="pricing.length > 0">
+                            <div id="pt-1-1"
+                                class="p-table pricing-1-table bg--white-100 block-shadow r-12 wow fadeInUp">
+                                <div class="pricing-table-header">
+                                    <h5
+                                        class="s-24 w-700 text-capitalize">{{pricing[1].variant}}</h5>
+                                    <div class="price">
+                                        <sup class="color--black">₹</sup>
+                                        <span
+                                            class="color--black">{{pricing[1].pricing}}</span>
+                                        
+                                        <p
+                                            class="color--grey">{{pricing[1].caption}}</p>
+                                    </div>
+                                    <a href="tel:+91 99529 37110"
+                                        class="btn r-04 btn--theme hover--tra-white"><i
+                                            class="fa-solid fa-headset"></i>&nbsp;&nbsp;Talk
+                                        to an Expert</a>
+                                </div>
+                                <ul
+                                    class="pricing-features color--black ico-10 ico--green mt-25">
+                                    <div
+                                        [innerHTML]="pricing[1].includes"></div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4" *ngIf="pricing.length > 0">
+                            <div id="pt-1-1"
+                                class="p-table pricing-1-table bg--white-100 block-shadow r-12 wow fadeInUp">
+                                <div class="pricing-table-header">
+                                    <h5
+                                        class="s-24 w-700 text-capitalize">{{pricing[2].variant}}</h5>
+                                    <div class="price">
+                                        <sup class="color--black">₹</sup>
+                                        <span
+                                            class="color--black">{{pricing[2].pricing}}</span>
+                                        
+                                        <p
+                                            class="color--grey">{{pricing[2].caption}}</p>
+                                    </div>
+                                    <a href="tel:+91 99529 37110"
+                                        class="btn r-04 btn--theme hover--tra-white"><i
+                                            class="fa-solid fa-headset"></i>&nbsp;&nbsp;Talk
+                                        to an Expert</a>
+                                </div>
+                                <ul
+                                    class="pricing-features color--black ico-10 ico--green mt-25">
+                                    <div
+                                        [innerHTML]="pricing[2].includes"></div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="2bhk" class="tab-content">
+                <div class="pricing-1-wrapper">
+                    <div class="row row-cols-1 row-cols-md-3">
+                        <div class="col-md-4" *ngIf="pricing.length > 0">
+                            <div id="pt-1-1"
+                                class="p-table pricing-1-table bg--white-100 block-shadow r-12 wow fadeInUp">
+                                <div class="pricing-table-header">
+                                    <h5
+                                        class="s-24 w-700 text-capitalize">{{pricing[3].variant}}</h5>
+                                    <div class="price">
+                                        <sup class="color--black">₹</sup>
+                                        <span
+                                            class="color--black">{{pricing[3].pricing}}</span>
+                                        
+                                        <p
+                                            class="color--grey">{{pricing[3].caption}}</p>
+                                    </div>
+                                    <a href="tel:+91 99529 37110"
+                                        class="btn r-04 btn--theme hover--tra-white"><i
+                                            class="fa-solid fa-headset"></i>&nbsp;&nbsp;Talk
+                                        to an Expert</a>
+                                </div>
+                                <ul
+                                    class="pricing-features color--black ico-10 ico--green mt-25">
+                                    <div
+                                        [innerHTML]="pricing[3].includes"></div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4" *ngIf="pricing.length > 0">
+                            <div id="pt-1-1"
+                                class="p-table pricing-1-table bg--white-100 block-shadow r-12 wow fadeInUp">
+                                <div class="pricing-table-header">
+                                    <h5
+                                        class="s-24 w-700 text-capitalize">{{pricing[4].variant}}</h5>
+                                    <div class="price">
+                                        <sup class="color--black">₹</sup>
+                                        <span
+                                            class="color--black">{{pricing[4].pricing}}</span>
+                                        
+                                        <p
+                                            class="color--grey">{{pricing[4].caption}}</p>
+                                    </div>
+                                    <a href="tel:+91 99529 37110"
+                                        class="btn r-04 btn--theme hover--tra-white"><i
+                                            class="fa-solid fa-headset"></i>&nbsp;&nbsp;Talk
+                                        to an Expert</a>
+                                </div>
+                                <ul
+                                    class="pricing-features color--black ico-10 ico--green mt-25">
+                                    <div
+                                        [innerHTML]="pricing[4].includes"></div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4" *ngIf="pricing.length > 0">
+                            <div id="pt-1-1"
+                                class="p-table pricing-1-table bg--white-100 block-shadow r-12 wow fadeInUp">
+                                <div class="pricing-table-header">
+                                    <h5
+                                        class="s-24 w-700 text-capitalize">{{pricing[5].variant}}</h5>
+                                    <div class="price">
+                                        <sup class="color--black">₹</sup>
+                                        <span
+                                            class="color--black">{{pricing[5].pricing}}</span>
+                                        
+                                        <p
+                                            class="color--grey">{{pricing[5].caption}}</p>
+                                    </div>
+                                    <a href="tel:+91 99529 37110"
+                                        class="btn r-04 btn--theme hover--tra-white"><i
+                                            class="fa-solid fa-headset"></i>&nbsp;&nbsp;Talk
+                                        to an Expert</a>
+                                </div>
+                                <ul
+                                    class="pricing-features color--black ico-10 ico--green mt-25">
+                                    <div
+                                        [innerHTML]="pricing[5].includes"></div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="3bhk" class="tab-content">
+                <div class="pricing-1-wrapper">
+                    <div class="row row-cols-1 row-cols-md-3">
+                        <div class="col-md-4" *ngIf="pricing.length > 0">
+                            <div id="pt-1-1"
+                                class="p-table pricing-1-table bg--white-100 block-shadow r-12 wow fadeInUp">
+                                <div class="pricing-table-header">
+                                    <h5
+                                        class="s-24 w-700 text-capitalize">{{pricing[6].variant}}</h5>
+                                    <div class="price">
+                                        <sup class="color--black">₹</sup>
+                                        <span
+                                            class="color--black">{{pricing[6].pricing}}</span>
+                                        
+                                        <p
+                                            class="color--grey">{{pricing[6].caption}}</p>
+                                    </div>
+                                    <a href="tel:+91 99529 37110"
+                                        class="btn r-04 btn--theme hover--tra-white"><i
+                                            class="fa-solid fa-headset"></i>&nbsp;&nbsp;Talk
+                                        to an Expert</a>
+                                </div>
+                                <ul
+                                    class="pricing-features color--black ico-10 ico--green mt-25">
+                                    <div
+                                        [innerHTML]="pricing[6].includes"></div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4" *ngIf="pricing.length > 0">
+                            <div id="pt-1-1"
+                                class="p-table pricing-1-table bg--white-100 block-shadow r-12 wow fadeInUp">
+                                <div class="pricing-table-header">
+                                    <h5
+                                        class="s-24 w-700 text-capitalize">{{pricing[7].variant}}</h5>
+                                    <div class="price">
+                                        <sup class="color--black">₹</sup>
+                                        <span
+                                            class="color--black">{{pricing[7].pricing}}</span>
+                                        
+                                        <p
+                                            class="color--grey">{{pricing[7].caption}}</p>
+                                    </div>
+                                    <a href="tel:+91 99529 37110"
+                                        class="btn r-04 btn--theme hover--tra-white"><i
+                                            class="fa-solid fa-headset"></i>&nbsp;&nbsp;Talk
+                                        to an Expert</a>
+                                </div>
+                                <ul
+                                    class="pricing-features color--black ico-10 ico--green mt-25">
+                                    <div
+                                        [innerHTML]="pricing[7].includes"></div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4" *ngIf="pricing.length > 0">
+                            <div id="pt-1-1"
+                                class="p-table pricing-1-table bg--white-100 block-shadow r-12 wow fadeInUp">
+                                <div class="pricing-table-header">
+                                    <h5
+                                        class="s-24 w-700 text-capitalize">{{pricing[8].variant}}</h5>
+                                    <div class="price">
+                                        <sup class="color--black">₹</sup>
+                                        <span
+                                            class="color--black">{{pricing[8].pricing}}</span>
+                                        
+                                        <p
+                                            class="color--grey">{{pricing[8].caption}}</p>
+                                    </div>
+                                    <a href="tel:+91 99529 37110"
+                                        class="btn r-04 btn--theme hover--tra-white"><i
+                                            class="fa-solid fa-headset"></i>&nbsp;&nbsp;Talk
+                                        to an Expert</a>
+                                </div>
+                                <ul
+                                    class="pricing-features color--black ico-10 ico--green mt-25">
+                                    <div
+                                        [innerHTML]="pricing[8].includes"></div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

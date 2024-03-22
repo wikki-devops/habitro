@@ -1,25 +1,112 @@
 <app-banner [bannerheading]="bannerheading" [bannerpara]="bannerpara" [bannerimage]="bannerimage" [displayForm]="displayForm"></app-banner>
-<div class="section">
+<section id="lnk-1" class="gr--whitesmoke pt-50 pb-50 content-section division">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6" data-aos="fade-right" data-aos-easing="ease-in-sine">
+                <div class="img-block left-column">
+                    <img class="img-fluid" src="https://ik.imagekit.io/habitro/residential/turnkey.jpg?updatedAt=1708416386384" alt="content-image" />
+                </div>
+            </div>
+            <div class="col-md-6 py-20" data-aos="fade-up" data-aos-easing="ease-in-sine">
+                <div class="txt-block right-column">
+                    <h2 class="s-24 w-700">Turnkey Interiors</h2>
+                    <p>‘Turnkey’ denotes something that is ‘fully finished and ready to use right away.’ At Habitro, we embrace your dream home project from start to finish. From conceptualization to execution till delivering your completed home, we ensure it’s ready for your immediate move-in. 
+                    </p>
+                    <a href="pricing" class="btn r-04 btn--theme hover--tra-white" style="margin-right: 10px;">Get Pricing Plans</a>
+                    <a (click)="scrollToCalculator()" class="btn r-04 hover--tra-white" style="background-color: #F55A96;">Calculate Price</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pt-50 pb-50 ct-01 content-section division" style="background-color: #f5f5f5; background-image: url(https://ik.imagekit.io/habitro/bg/construction-bg.jpg?updatedAt=1707144478183); background-position: top center; background-repeat: no-repeat;">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6 order-last order-md-2">
+                <div class="txt-block left-column wow fadeInRight">
+                    <div class="txt-box">
+                        <h5 class="s-24 w-700">Residential Interiors</h5>
+                        <p>Once you build a home, do you move into a plain and bland space?</p>
+                        <p>No! Home or residential interiors are about transforming the bare and unadorned space into a home that reflects your essence, dream and comfort. Our skilled interior designers know the knack for crafting functional, safe and aesthetically appealing spaces and not just loading them with furniture and cosy colour codes.</p>
+                    </div>
+                    <div class="txt-box mb-0">
+                        <h5 class="s-24 w-700">Why Do Home Interiors Matter?</h5>
+                        <p>Home Interiors significantly impact your personal expression, comfort, and emotional well-being. It enhances functionality and optimizes your space for safety and accessibility. Our professionally designed spaces:</p>
+                        <ul class="simple-list">
+                            <li class="list-item">
+                                <p>Elevate property value</p>
+                            </li>
+                            <li class="list-item">
+                                <p>Foster social engagement</p>
+                            </li>
+                            <li class="list-item">
+                                <p>Create a cohesive, supportive and enjoyable living environment</p>
+                            </li>
+                            <li class="list-item">
+                                <p class="mb-0">Ensures your practical daily use</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 order-first order-md-2">
+                <div class="img-block right-column wow fadeInLeft">
+                    <img class="img-fluid" src="https://ik.imagekit.io/habitro/residential/tr:w-600,h-800/residential-home-interiors.jpg?updatedAt=1709288017137" alt="content-image" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
     <div class="box-container">
-        <div class="box-item" *ngFor="let item of cardreveal">
+        <div class="box-item" style="margin: 20px;" *ngFor="let item of cardreveal">
             <div class="flip-box">
                 <div class="flip-box-front text-center" style="background-image: url('{{item.image}}')">
                     <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
                     <div class="inner color-white">
                         <h3 class="flip-box-header color-white">{{item.content}}</h3>
-                        <p>{{item.descripition}}</p>
-                        <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img" />
+                        <!--i class="fa-solid fa-circle-arrow-right fa-2xl" style="color: #B197FC;"></!--i-->
                     </div>
                 </div>
-                <div class="flip-box-back text-center" style="background-color: gray;">
+                <div class="flip-box-back text-center" style="background-color: black;">
                     <div class="inner color-white">
-                        <h3 class="flip-box-header">Loremsum Content</h3>
-                        <p>A short sentence describing this callout is.</p>
-                        <a href="contact" class="flip-box-button">Get a Quote</a>
+                        <p>{{item.descripition}}</p>
+                        <a href="contact" class="btn r-04 btn--theme hover--tra-shades">Get a Quote</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<section id="brands-1" class="pt-50 pb-50 brands-section" style="position: relative; background-image: url('https://ik.imagekit.io/habitro/bg/associate-bg.jpg?updatedAt=1707144456375'); background-size: cover; background-position: center;">
+    <div style="position: relative; z-index: 1;">
+        <div class="container">
+            <!-- BRANDS TITLE -->
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-9">
+                    <div class="inner-page-title">
+                        <h2 class="s-38 w-600 color--white py-20" data-aos="fade-up" data-aos-easing="ease-in-sine">Our Associate Partners</h2>
+                        <div class="bottom-line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <owl-carousel-o [options]="owlCarouselOptions">
+                  <ng-container *ngFor="let item of residentialbrands">
+                      <ng-template carouselSlide>
+                          <div class="img-block video-preview" style="padding: 10px;">
+                                  <img class="img-fluid" [src]="item.image || 'assets/images/test/1.svg'" alt="video-preview" style="margin-bottom: 10px;width: 200px; height:200px;"/>
+                          </div>
+                      </ng-template>
+                  </ng-container>
+              </owl-carousel-o>
+            </div>          
+        </div>
+    </div>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 0;"></div>
+</section>
+<app-calculator id="calculatorSection"></app-calculator>
 <app-calltoaction [copyhead]="copyhead"></app-calltoaction>

@@ -5,6 +5,11 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MagnificPopup } from 'angular-magnific-popup';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 import { FilterPipe } from './filter.pipe'; // Import your custom pipe
 import { CdkAccordionModule } from '@angular/cdk/accordion';
@@ -20,7 +25,13 @@ import { CommercialComponent } from './pages/commercial/commercial.component';
 import { ConstructionComponent } from './pages/construction/construction.component';
 import { RenovationComponent } from './pages/renovation/renovation.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { LegalInformationComponent } from './pages/legal-information/legal-information.component';
+import { BlogsComponent } from './blogs/blogs/blogs.component';
+import { BlogDetailComponent } from './blogs/blog-detail/blog-detail.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { GallerywallComponent } from './pages/gallerywall/gallerywall.component';
+import { PricingComponent } from './pages/pricing/pricing.component';
+import { CalculatorComponent } from './widget/calculator/calculator.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +47,13 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
     ConstructionComponent,
     RenovationComponent,
     ContactComponent,
-    ErrorPageComponent
+    LegalInformationComponent,
+    BlogsComponent,
+    BlogDetailComponent,
+    ErrorPageComponent,
+    GallerywallComponent,
+    PricingComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +62,11 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
     CarouselModule,
     BrowserAnimationsModule,
     CdkAccordionModule,
-    FormsModule
+    FormsModule,
+    MagnificPopup,
+    ReactiveFormsModule,
+    MatTabsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],

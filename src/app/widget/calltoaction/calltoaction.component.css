@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1400px) {
     /* Adjust the animation or element properties for mobile screens */
     [data-aos="fade-right"] {
       /* For example, you might change the animation to fade in without the right movement */
@@ -15,6 +15,10 @@
       opacity: 1; /* Ensure the element is visible */
       transform: none; /* Remove any transformation */
     }
+    .banner-section{
+      background-position-y: -0px !important;
+    }
+
   }
 .btn--tra-white, .hover--tra-white:hover {
   color: black !important;
@@ -25,3 +29,11 @@
   padding: 75px;
 }
 
+@media only screen and (max-width: 490px) {
+  #banner-3 {
+      background-position-y: 0px !important;
+  }
+  .banner-3-wrapper .banner-overlay {
+    padding: 5px !important;
+}
+}

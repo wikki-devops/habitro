@@ -1,20 +1,15 @@
-<app-banner
-    [bannerheading]="bannerheading"
-    [bannerpara]="bannerpara"
-    [bannerimage]="bannerimage"
-    [displayForm]="displayForm"
-></app-banner>
+<app-banner [bannerheading]="bannerheading" [bannerpara]="bannerpara" [bannerimage]="bannerimage" [displayForm]="displayForm"></app-banner>
 <!-- About Section -->
 <section id="lnk-2" class="bg--white-400 ct-04 content-section division">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6 py-30 order-md-2" data-aos="fade-left">
+            <div class="col-md-6 py-30 order-md-2 wow fadeInRight">
                 <div class="txt-block left-column">
                     <h2 class="mb-0 s-38 w-600">About Habitro</h2>
                     <p>We, at Habitro, are a team of three certified architects & designers, based in Chennai, tracing our relationships back to our college days.</p>
                     <div class="cbox-2 process-step">
                         <div class="ico-wrap">
-                            <div class="cbox-2-ico bg--theme color--white">1</div>
+                            <div class="cbox-2-ico color--white">1</div>
                             <span class="cbox-2-line"></span>
                         </div>
                         <div class="cbox-2-txt">
@@ -24,7 +19,7 @@
                     </div>
                     <div class="cbox-2 process-step">
                         <div class="ico-wrap">
-                            <div class="cbox-2-ico bg--theme color--white">2</div>
+                            <div class="cbox-2-ico color--white">2</div>
                             <span class="cbox-2-line"></span>
                         </div>
                         <div class="cbox-2-txt">
@@ -37,7 +32,7 @@
                     </div>
                     <div class="cbox-2 process-step">
                         <div class="ico-wrap">
-                            <div class="cbox-2-ico bg--theme color--white">3</div>
+                            <div class="cbox-2-ico color--white">3</div>
                         </div>
                         <div class="cbox-2-txt">
                             <h5 class="s-20 w-600">Transparent & Rock-Solid Foundations</h5>
@@ -46,9 +41,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 order-md-2" data-aos="fade-right">
+            <div class="col-md-6 order-md-2 wow fadeInLeft">
                 <div class="img-block">
-                    <img class="img-fluid" src="https://ik.imagekit.io/habitro/about-habitro.jpg?updatedAt=1706606620928" alt="content-image">
+                    <img class="img-fluid shining-effect" src="https://ik.imagekit.io/habitro/about-habitro.jpg?updatedAt=1706606620928" alt="content-image" />
                 </div>
             </div>
         </div>
@@ -56,11 +51,11 @@
 </section>
 <!-- Service Section -->
 <section id="faqs-4" class="gr--whitesmoke pt-50 pb-50 faqs-section division">
-    <div class="container" data-aos="zoom-in">
+    <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-10 col-lg-9">
+            <div class="col-md-10 col-lg-9 wow fadeInUp">
                 <div class="inner-page-title">
-                    <h2 class="s-38 w-600 color--white">What We Do Best</h2>
+                    <h2 class="s-38 w-600 py-20 color--white">What We Do Best</h2> 
                     <div class="bottom-line"></div>
                 </div>
             </div>
@@ -96,9 +91,9 @@
         <div class="tabs-content">
             <div class="row justify-content-center">
                 <div class="col-xl-12">
-                    <div id="residential" class="tab-content current" data-aos="zoom-in" data-aos-duration="3000">
+                    <div id="residential" class="tab-content current">
                         <div class="row">
-                            <div class="col-md-2 col-4" *ngFor="let item of service | filter: 'residential' :'data_filter'">
+                            <div class="col-md-2 col-6" *ngFor="let item of service | filter: [{ property: 'data_filter', value: 'residential' }];">
                                 <div class="ico-50 r-25" style="text-align: center;">
                                     <img class="img-fluid" src="assets/images/icons/{{item.image}}" alt="habitro-service" />
                                     <p>{{item.service_name}}</p>
@@ -108,7 +103,7 @@
                     </div>
                     <div id="commercial" class="tab-content">
                         <div class="row">
-                            <div class="col-md-2 col-4" *ngFor="let item of service | filter: 'commercial'  :'data_filter'">
+                            <div class="col-md-2 col-6" *ngFor="let item of service | filter: [{ property: 'data_filter', value: 'commercial' }];">
                                 <div class="ico-50 r-25" style="text-align: center;">
                                     <img class="img-fluid" src="assets/images/icons/{{item.image}}" alt="habitro-service" />
                                     <p>{{item.service_name}}</p>
@@ -118,7 +113,7 @@
                     </div>
                     <div id="construction" class="tab-content">
                         <div class="row">
-                            <div class="col-md-2 col-4" *ngFor="let item of service | filter: 'construction'  :'data_filter'">
+                            <div class="col-md-2 col-6" *ngFor="let item of service | filter: [{ property: 'data_filter', value: 'construction' }];">
                                 <div class="ico-50 r-25" style="text-align: center;">
                                     <img class="img-fluid" src="assets/images/icons/{{item.image}}" alt="habitro-service" />
                                     <p>{{item.service_name}}</p>
@@ -128,7 +123,7 @@
                     </div>
                     <div id="renovation" class="tab-content">
                         <div class="row">
-                            <div class="col-md-2 col-4" *ngFor="let item of service | filter: 'renovation'  :'data_filter'">
+                            <div class="col-md-2 col-4" *ngFor="let item of service | filter: [{ property: 'data_filter', value: 'renovation' }];">
                                 <div class="ico-50 r-25" style="text-align: center;">
                                     <img class="img-fluid" src="assets/images/icons/{{item.image}}" alt="habitro-service" />
                                     <p>{{item.service_name}}</p>
@@ -159,10 +154,10 @@
 >
     <div class="container">
         <!-- SECTION TITLE -->
-        <div class="row justify-content-center" data-aos="zoom-in">
+        <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
                 <div class="inner-page-title">
-                    <a class="video-popup1" href="#"><h2 class="s-38 w-600">Hear From Our Clients</h2></a>
+                    <h2 class="s-38 w-600 py-20" data-aos="fade-up">Hear From Our Clients</h2>
                     <div class="bottom-line"></div>
                 </div>
             </div>
@@ -171,12 +166,16 @@
             <owl-carousel-o [options]="customOptions">
                 <ng-container *ngFor="let item of testimonials">
                     <ng-template carouselSlide>
-                        <div class="img-block video-preview" data-aos="zoom-in">
-                            <a class="video-popup1" [href]="item.video">
+                        <div class="img-block video-preview">
+                            <!--a class="video-popup1" [href]="item.video">
                                 <img class="img-fluid" [src]="item.thumbnail || 'assets/images/test/1.svg'" alt="video-preview" style="margin-bottom: 10px;" />
-                                <p style="font-style: italic; line-height: 20px; padding: 10px;">"{{ item.name }}"</p>
-                                <h6 style="padding-bottom: 10px;">{{ item.company }}</h6>
-                            </a>
+                            </!--a-->
+                            <img class="img-fluid" src="assets/images/testi.png" alt="video-preview" class="center" style="margin-bottom: 10px; width: 150px; height: 150px;display: block;
+                            margin-left: auto;
+                            margin-right: auto;" 
+                            />
+                            <p style="font-style: italic; line-height: 20px; padding: 10px;">"{{ item.testimonial }}"</p>
+                            <h6 style="padding-bottom: 10px;">{{ item.company }}</h6>
                         </div>
                     </ng-template>
                 </ng-container>
@@ -184,6 +183,5 @@
         </div>
     </div>
 </section>
+<app-calculator id="calculatorSection"></app-calculator>
 <app-calltoaction [copyhead]="copyhead"></app-calltoaction>
-
-

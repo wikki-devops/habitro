@@ -1,0 +1,196 @@
+<app-banner [bannerheading]="bannerheading" [bannerpara]="bannerpara"
+    [bannerimage]="bannerimage" [displayForm]="displayForm"></app-banner>
+    <section id="faqs-4" class="gr--whitesmoke pt-50 pb-50 faqs-section division" style="min-height: 1000px;">
+        <div class="container">
+            <div class="tabs-nav tabs--theme clearfix">
+                <ul class="tabs-1">
+                    <li class="tab-link current r-16" data-tab="work">
+                        <p>Work</p>
+                    </li>
+                    <li class="tab-link r-16" data-tab="inspirational">
+                        <p>Residential Inspirationals</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="tabs-content">
+                <div id="work" class="tab-content current">
+                    <!-- Work Photos Tab Content -->
+                    <div class="row">
+                        <div class="col-md-4 col-6" *ngFor="let item of gallery | filter: [{ property: 'data_filter', value: 'work' }];" magnificPopup>
+                            <div id="pt-1-1" class="project-details">
+                                <h5 class="s-24"></h5>
+                                <div class="project-preview r-10">
+                                    <div class="hover-overlay">
+                                        <img class="img-fluid" src="{{item.image}}tr=w-1000,h-1000" alt="project-preview" />
+                                        <div class="item-overlay"></div>
+                                    </div>
+                                    <div class="project-link ico-35 color--white">
+                                        <a href="{{item.image}}" title><span class="flaticon-visibility"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="inspirational" class="tab-content">
+                    <!-- Work Photos Tab Content -->
+                    <div class="row">
+                        <div class="tabs-nav tabs--theme clearfix">
+                            <ul class="tabs-1">
+                                <li class="tab-link r-16" data-tab="wardrobe">
+                                    <p>Wardrobe</p>
+                                </li>
+                                <li class="tab-link r-16" data-tab="kitchen">
+                                    <p>Kitchen</p>
+                                </li>
+                                <li class="tab-link r-16" data-tab="tv-wall">
+                                    <p>TV Wall</p>
+                                </li>
+                                <li class="tab-link r-16" data-tab="poojaroom">
+                                    <p>Pooja Room</p>
+                                </li>
+                                <li class="tab-link r-16" data-tab="bedroom">
+                                    <p>Beedrooms</p>
+                                </li>
+                                <li class="tab-link r-16" data-tab="falseceiling">
+                                    <p>False Ceiling</p>
+                                </li>
+                                <li class="tab-link r-16" data-tab="foyerwall">
+                                    <p>Foyer Wall</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-content">
+                    <div id="wardrobe" class="tab-content">
+                        <div class="row">
+                            <div class="col-md-4 col-6" *ngFor="let item of gallery | filter: [{ property: 'data_filter', value: 'wardrobe' }];" magnificPopup>
+                                <div id="pt-1-1" class="project-details">
+                                    <h5 class="s-24"></h5>
+                                    <div class="project-preview r-10">
+                                        <div class="hover-overlay">
+                                            <img class="img-fluid" src="{{item.image}}tr=w-1000,h-1000" alt="project-preview" />
+                                            <div class="item-overlay"></div>
+                                        </div>
+                                        <div class="project-link ico-35 color--white">
+                                            <a href="{{item.image}}" title><span class="flaticon-visibility"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="kitchen" class="tab-content">
+                        <div class="row">
+                            <div class="col-md-4 col-6" *ngFor="let item of gallery | filter: [{ property: 'data_filter', value: 'kitchen' }];" magnificPopup>
+                                <div id="pt-1-1" class="project-details">
+                                    <h5 class="s-24"></h5>
+                                    <div class="project-preview r-10">
+                                        <div class="hover-overlay">
+                                            <img class="img-fluid" src="{{item.image}}tr=w-1000,h-1000" alt="project-preview" />
+                                            <div class="item-overlay"></div>
+                                        </div>
+                                        <div class="project-link ico-35 color--white">
+                                            <a href="{{item.image}}" title><span class="flaticon-visibility"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tv-wall" class="tab-content">
+                        <div class="row">
+                            <div class="col-md-4 col-6" *ngFor="let item of gallery | filter: [{ property: 'data_filter', value: 'tv-wall' }];" magnificPopup>
+                                <div id="pt-1-1" class="project-details">
+                                    <h5 class="s-24"></h5>
+                                    <div class="project-preview r-10">
+                                        <div class="hover-overlay">
+                                            <img class="img-fluid" src="{{item.image}}tr=w-1000,h-1000" alt="project-preview" />
+                                            <div class="item-overlay"></div>
+                                        </div>
+                                        <div class="project-link ico-35 color--white">
+                                            <a href="{{item.image}}" title><span class="flaticon-visibility"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="poojaroom" class="tab-content">
+                        <div class="row">
+                            <div class="col-md-4 col-6" *ngFor="let item of gallery | filter: [{ property: 'data_filter', value: 'poojaroom' }];" magnificPopup>
+                                <div id="pt-1-1" class="project-details">
+                                    <h5 class="s-24"></h5>
+                                    <div class="project-preview r-10">
+                                        <div class="hover-overlay">
+                                            <img class="img-fluid" src="{{item.image}}tr=w-1000,h-1000" alt="project-preview" />
+                                            <div class="item-overlay"></div>
+                                        </div>
+                                        <div class="project-link ico-35 color--white">
+                                            <a href="{{item.image}}" title><span class="flaticon-visibility"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bedroom" class="tab-content">
+                        <div class="row">
+                            <div class="col-md-4 col-6" *ngFor="let item of gallery | filter: [{ property: 'data_filter', value: 'bedroom' }];" magnificPopup>
+                                <div id="pt-1-1" class="project-details">
+                                    <h5 class="s-24"></h5>
+                                    <div class="project-preview r-10">
+                                        <div class="hover-overlay">
+                                            <img class="img-fluid" src="{{item.image}}tr=w-1000,h-1000" alt="project-preview" />
+                                            <div class="item-overlay"></div>
+                                        </div>
+                                        <div class="project-link ico-35 color--white">
+                                            <a href="{{item.image}}" title><span class="flaticon-visibility"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="falseceiling" class="tab-content">
+                        <div class="row">
+                            <div class="col-md-4 col-6" *ngFor="let item of gallery | filter: [{ property: 'data_filter', value: 'falseceiling' }];" magnificPopup>
+                                <div id="pt-1-1" class="project-details">
+                                    <h5 class="s-24"></h5>
+                                    <div class="project-preview r-10">
+                                        <div class="hover-overlay">
+                                            <img class="img-fluid" src="{{item.image}}tr=w-1000,h-1000" alt="project-preview" />
+                                            <div class="item-overlay"></div>
+                                        </div>
+                                        <div class="project-link ico-35 color--white">
+                                            <a href="{{item.image}}" title><span class="flaticon-visibility"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="foyerwall" class="tab-content">
+                        <div class="row">
+                            <div class="col-md-4 col-6" *ngFor="let item of gallery | filter: [{ property: 'data_filter', value: 'foyerwall' }];" magnificPopup>
+                                <div id="pt-1-1" class="project-details">
+                                    <h5 class="s-24"></h5>
+                                    <div class="project-preview r-10">
+                                        <div class="hover-overlay">
+                                            <img class="img-fluid" src="{{item.image}}tr=w-1000,h-1000" alt="project-preview" />
+                                            <div class="item-overlay"></div>
+                                        </div>
+                                        <div class="project-link ico-35 color--white">
+                                            <a href="{{item.image}}" title><span class="flaticon-visibility"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    

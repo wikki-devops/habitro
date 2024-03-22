@@ -1,22 +1,15 @@
+// filter.pipe.ts
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
-  transform(items: any[], filter: string, filterType: string): any[] {
-    if (!items || !filter || !filterType) {
+  transform(items: any[], filters: { property: string; value: string }[]): any[] {
+    if (!items || !filters || filters.length === 0) {
       return items;
     }
 
-    // Perform filtering based on different filter types
-    switch (filterType) {
-      case 'data_filter':
-        return items.filter(item => item.data_filter === filter);
-      case 'package':
-        return items.filter(item => item.package === filter);
-      default:
-        return items;
-    }
+    return items.filter(item => filters.every(filter => item[filter.property] === filter.value));
   }
 }

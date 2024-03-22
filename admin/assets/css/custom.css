@@ -1,5 +1,6 @@
 .table thead th {
-    font-size: 18px !important;
+    font-size: 16px !important;
+    font-weight: 500;
 }
 .table tbody tr td {
     font-size: 16px !important;
@@ -38,6 +39,23 @@ body{
 }
 
 .deznav .metismenu li {
-    margin-top: 10px !important;
+    margin: 10px !important;
+}
+
+.accordion-body li {
+    list-style: auto !important;
+}
+.avatar-upload .avatar-preview > div {
+    display: block;
+    width: 250px !important;
+    height: 250px !important;
+}
+
+.card-body ol li {
+    list-style-type: auto !important;
+}
+
+.nav-pills .nav-link {
+    margin: 10px 0px !important;
 }
 

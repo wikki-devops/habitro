@@ -2,68 +2,131 @@ img.footer-logo,
 img.footer-logo-dark {
     max-height: 60px;
 }
+
 .footer-info,
 .footer-links {
     padding: 20px;
     margin: 20px;
 }
 
-.footer-info,
-.footer-links a:hover {
-    color: #7851a9 !important;
-}
 
 .footer {
-    padding-bottom: 0px !important ;
+    padding-bottom: 0px !important;
 }
 
 .social-icon:hover {
     width: 40px;
     height: 40px;
 }
+
 .footer hr {
     margin: 0px !important;
 }
+
 .footer-info p a {
-    padding-top: 10px;
     font-size: 18px;
     color: rgba(0, 0, 0, 0.7);
 }
 
 .footer-info p {
-    padding-top: 10px;
+    margin-top: 1rem;
     font-size: 18px;
     color: rgba(0, 0, 0, 0.7);
 }
 
 @media screen and (max-width: 768px) {
+
     /* Adjust the animation or element properties for mobile screens */
     [data-aos="fade-right"] {
         /* For example, you might change the animation to fade in without the right movement */
-        opacity: 1; /* Ensure the element is visible */
-        transform: none; /* Remove any transformation */
+        opacity: 1;
+        /* Ensure the element is visible */
+        transform: none;
+        /* Remove any transformation */
     }
+
     [data-aos="fade-left"] {
         /* For example, you might change the animation to fade in without the right movement */
-        opacity: 1; /* Ensure the element is visible */
-        transform: none; /* Remove any transformation */
+        opacity: 1;
+        /* Ensure the element is visible */
+        transform: none;
+        /* Remove any transformation */
     }
+
     [data-aos="zoom-in"] {
         /* For example, you might change the animation to fade in without the right movement */
-        opacity: 1; /* Ensure the element is visible */
-        transform: none; /* Remove any transformation */
+        opacity: 1;
+        /* Ensure the element is visible */
+        transform: none;
+        /* Remove any transformation */
     }
+
+    [data-aos="fade-up"] {
+        /* For example, you might change the animation to fade in without the right movement */
+        opacity: 1;
+        /* Ensure the element is visible */
+        transform: none;
+        /* Remove any transformation */
+    }
+
+    .bottom-footer {
+        padding: 10px 0px !important;
+    }
+
     .footer-links {
         text-align: left !important;
     }
+
     .footer-info,
     .footer-links {
-    padding: 10px!important; 
-    margin: 10px !important;
-    border-bottom: 1px solid #e2e2e2;
+        padding: 10px !important;
+        margin: 10px !important;
+        border-bottom: 1px solid #e2e2e2;
+    }
 
+    .bottom-footer {
+        text-align: center !important;
+    }
+    .footer-info{
+        width: 100% !important;
+    }
 }
-.bottom-footer{
-  text-align: center !important;
+
+.bottom-footer {
+    padding: 10px 20px;
 }
+@media screen and (max-width: 900px) {
+
+    /* Adjust the animation or element properties for mobile screens */
+    [data-aos="fade-right"] {
+        /* For example, you might change the animation to fade in without the right movement */
+        opacity: 1;
+        /* Ensure the element is visible */
+        transform: none;
+        /* Remove any transformation */
+    }
+
+    [data-aos="fade-left"] {
+        /* For example, you might change the animation to fade in without the right movement */
+        opacity: 1;
+        /* Ensure the element is visible */
+        transform: none;
+        /* Remove any transformation */
+    }
+
+    [data-aos="zoom-in"] {
+        /* For example, you might change the animation to fade in without the right movement */
+        opacity: 1;
+        /* Ensure the element is visible */
+        transform: none;
+        /* Remove any transformation */
+    }
+
+    [data-aos="fade-up"] {
+        /* For example, you might change the animation to fade in without the right movement */
+        opacity: 1;
+        /* Ensure the element is visible */
+        transform: none;
+        /* Remove any transformation */
+    }
 }

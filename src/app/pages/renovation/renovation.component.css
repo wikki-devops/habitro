@@ -9,6 +9,18 @@
   .in_tool-txt p {
     padding: 20px;
   }
+  .img-fluid{
+    width: 120px;
+    height: 120px;
+    /*background: linear-gradient(to bottom right, #7851A9, #F55A96);border-radius: 50%;*/
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 25px;
+  }
+  .ico-60 img:hover {
+    animation: bounce 0.5s ease-in-out infinite;
+  }
+
   
   /* CSS Media Query for Mobile Devices */
   @media screen and (max-width: 768px) {
@@ -33,9 +45,97 @@
         opacity: 1; /* Ensure the element is visible */
         transform: none; /* Remove any transformation */
     }
+    .first{
+      width: 450px !important;
+      height: 250px !important;
+      box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.11);
+    }
+    
+    .second{
+      width: 450px !important;
+      height: 250px !important;
+      box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.11);
+    }
+  
+  
   }
   
   .in_tool {
     box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.11);
   }
   
+  @media screen and (max-width: 768px) {
+    #integrations-1 .in_tool-logo.ico-60 img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+
+.first{
+  width: 700px;
+  height: 400px;
+  box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.11);
+}
+
+.second{
+  width: 700px;
+  height: 400px;
+  box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.11);
+}
+
+@media (min-width: 490px) and (max-width: 900px)  {
+
+  /* Adjust the animation or element properties for mobile screens */
+  [data-aos="fade-right"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1;
+      /* Ensure the element is visible */
+      transform: none;
+      /* Remove any transformation */
+  }
+
+  [data-aos="fade-left"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1;
+      /* Ensure the element is visible */
+      transform: none;
+      /* Remove any transformation */
+  }
+
+  [data-aos="zoom-in"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1;
+      /* Ensure the element is visible */
+      transform: none;
+      /* Remove any transformation */
+  }
+
+  [data-aos="fade-up"] {
+      /* For example, you might change the animation to fade in without the right movement */
+      opacity: 1;
+      /* Ensure the element is visible */
+      transform: none;
+      /* Remove any transformation */
+  }
+  .integrations-1-wrapper .in_tool{
+    min-height: 430px !important;
+}
+#integrations-1 .in_tool-logo.ico-60 img {
+  width: 120px !important;
+  height: 120px !important;
+}
+.first{
+  width: 600px;
+  height: 400px;
+  box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.11);
+}
+
+.second{
+  width: 600px;
+  height: 400px;
+  box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.11);
+}
+
+
+}

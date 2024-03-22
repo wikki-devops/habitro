@@ -1,5 +1,9 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, Renderer2, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { ToastrService } from 'ngx-toastr';
+
+import * as AOS from 'aos';
+
 
 declare var $: any; // Declare $ for jQuery
 
@@ -8,9 +12,9 @@ declare var $: any; // Declare $ for jQuery
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'habi';
-  constructor(private renderer: Renderer2) { }
+export class AppComponent implements OnInit {
+  title = 'Habitro';
+  constructor(private renderer: Renderer2, private toastr: ToastrService) { }
 
   ngAfterViewInit(){
     const script = this.renderer.createElement('script');
@@ -36,6 +40,8 @@ export class AppComponent {
     this.renderer.appendChild(document.body, script);
 
   }
-
-
+  ngOnInit() {
+    AOS.init();
+    AOS.refresh();
+  }
 }

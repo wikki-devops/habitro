@@ -14,6 +14,7 @@ export class FooterComponent {
 
   company: any[] = [];
   menu: any[] =[];
+  blogs: any[] =[];
 
 
   constructor(private DatabaseService: DatabaseService) {}
@@ -25,10 +26,19 @@ export class FooterComponent {
     this.DatabaseService.getmenu().subscribe(data => {
       this.menu = data;
     }); 
+    this.DatabaseService.getblogs().subscribe(data => {
+      this.blogs = data;
+    }); 
 
   }
   isCompanyDefined(): boolean {
     return this.company && this.company.length > 0;
   }
+  truncateTitle(title: string, wordsToShow: number): string {
+    const words = title.split(' ');
+    const truncatedWords = words.slice(0, wordsToShow).join(' ');
+    return truncatedWords.length < title.length ? truncatedWords + '...' : truncatedWords;
+  }
+
 
 }

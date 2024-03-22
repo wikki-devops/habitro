@@ -93,5 +93,58 @@
     margin-left: -2.1875rem;
   }
   .team-members-wrapper{
-    max-height: 680px;
+    max-height: 600px;
   }
+
+
+  @media only screen and (max-width: 490px) {
+    .txt-block.right-column{
+        padding: 20px !important;
+    }
+    .left-column .img-fluid {
+      display: none !important;
+    }
+}
+.img-fluid {
+  max-width: 400px !important;
+}
+
+@media (min-width: 490px) and (max-width: 900px) {
+   /* Adjust the animation or element properties for mobile screens */
+  [data-aos="fade-right"] {
+    /* For example, you might change the animation to fade in without the right movement */
+    opacity: 1; /* Ensure the element is visible */
+    transform: none; /* Remove any transformation */
+  }
+  [data-aos="fade-left"] {
+    /* For example, you might change the animation to fade in without the right movement */
+    opacity: 1; /* Ensure the element is visible */
+    transform: none; /* Remove any transformation */
+  }
+  [data-aos="zoom-in"] {
+    /* For example, you might change the animation to fade in without the right movement */
+    opacity: 1; /* Ensure the element is visible */
+    transform: none; /* Remove any transformation */
+  }
+  .image{
+    display: none;
+  }
+  .img-fluid {
+    max-width: 100% !important;
+    height: 100% !important;
+}
+.team-member-data p{
+  font-size: 12px !important;
+  line-height: 15px !important;
+}
+.inner-page-hero {
+  margin-top: 0px !important;
+  padding: 50px 0px !important;
+}
+.tabletcss{
+  height: 20vh !important;
+}
+.tabletcss2{
+  height: 20vh !important;
+}
+}

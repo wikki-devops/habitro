@@ -17,7 +17,7 @@
     <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet" />
 </head>
 
-<body style="background-image: url('<?php echo base_url(); ?>assets/images/bg.jpg');background-repeat: no-repeat;background-size: cover;">
+<body style="background-image: url('<?php echo base_url(); ?>assets/images/login-background.jpg');background-repeat: no-repeat;background-size: cover;">
     <div class="fix-wrapper">
         <div class="container">
             <div class="row justify-content-center">
@@ -41,14 +41,14 @@
                             <?php endif; ?>
                             <?php echo form_open(base_url('welcome/adminLogin')); ?>
                             <div class="form-group mb-4">
-                                <label class="form-label" for="email">Email</label>
-                                <input type="email" class="form-control" placeholder="Enter email" id="email"
+                                <label class="form-label" for="email">User Name</label>
+                                <input type="text" class="form-control" placeholder="Enter User Name" id="email"
                                     name="email" required />
                             </div>
                             <div class="form-group mb-3 mb-sm-4">
                                 <label class="form-label">Password</label>
                                 <div class="position-relative">
-                                    <input type="password" id="dz-password" class="form-control" placeholder="Password"
+                                    <input type="password" id="dz-password" class="form-control" placeholder="Enter Password"
                                         name="password" required />
                                     <span class="show-pass eye">
                                         <i class="fa fa-eye-slash"></i>

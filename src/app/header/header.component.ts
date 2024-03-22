@@ -11,7 +11,6 @@ export class HeaderComponent implements OnInit {
 
   hideLoading: boolean = false;
 
-
   company: any[] = [];
   menu: any[] =[];
 

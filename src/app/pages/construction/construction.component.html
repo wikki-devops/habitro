@@ -1,122 +1,159 @@
-<app-banner [bannerheading]="bannerheading" [bannerpara]="bannerpara" [bannerimage]="bannerimage" [displayForm]="displayForm"></app-banner>
-<section id="faqs-2" class="gr--whitesmoke pt-50 pb-50 faqs-section division" style="background-color: #f5f5f5; background-image: url(assets/images/renovation-bg.jpg); background-position: top center; background-repeat: no-repeat;">
+<app-banner [bannerheading]="bannerheading" [bannerpara]="bannerpara"
+    [bannerimage]="bannerimage" [displayForm]="displayForm"></app-banner>
+<section id="faqs-2" class="gr--whitesmoke pt-50 pb-50 faqs-section division"
+    style="background-color: #f5f5f5; background-image: url(https://ik.imagekit.io/habitro/bg/construction-bg.jpg?updatedAt=1707144478183); background-position: top center; background-repeat: no-repeat;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-12 col-xl-12">
                 <!-- QUESTIONS ACCORDION -->
                 <div class="accordion-wrapper row">
-                    <div class="col-md-4" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2100">
-                        <div class="pb-10" style="border: 1px solid rgb(221, 221, 221); border-radius: 50px; border: 1px solid rgb(221, 221, 221); padding-bottom: 10px; margin-bottom: 10px;">
-                            <div class="inner-page-title2 text-center p-10" style="border-bottom: 1px solid #ddd;">
-                                <h2 class="s-20 w-600" style="margin-top: 1em; margin-bottom: 1em;">Standard Package</h2>
-                                <a href="contact" class="btn r-04 btn--theme" style="padding: 12px 30px;">Get Quote</a>
+                    <div class="col-md-4">
+                        <div class="pb-10"
+                            style="border: 1px solid rgb(221, 221, 221);background: white; border-radius: 50px; border: 1px solid rgb(221, 221, 221); padding-bottom: 10px; margin-bottom: 10px;">
+                            <div class="inner-page-title2 text-center p-10"
+                                style="border-bottom: 1px solid #ddd;">
+                                <h2 class="s-20 w-600 text-uppercase"
+                                    style="margin-top: 1em; margin-bottom: 1em;">Standard
+                                    Package</h2>
+                                <p>Perfect for 2200 / sft</p>
+                                    
+                                <a href="contact" class="btn r-04 btn--theme"
+                                    style="padding: 12px 30px;">Get Quote</a>
                             </div>
                             <ul class="accordion p-10">
                                 <cdk-accordion class="example-accordion">
                                     <cdk-accordion-item
-                                        *ngFor="let item of items | filter: 'standard' : 'package'; let index = index"
+                                        *ngFor="let item of items | filter: [{ property: 'package', value: 'standard' }]; let index = index"
                                         #accordionItem="cdkAccordionItem"
                                         class="example-accordion-item"
                                         role="button"
                                         tabindex="0"
-                                        [attr.id]="'accordion-header-' + index"
-                                        [attr.aria-expanded]="accordionItem.expanded"
-                                        [attr.aria-controls]="'accordion-body-' + index"
-                                    >
-                                        <div class="example-accordion-item-header" style="color: black;" (click)="accordionItem.toggle()">
+                                        [attr.id]="'accordion-header-standard-' + index"
+                                        [attr.aria-expanded]="accordionStates[index]"
+                                        [attr.aria-controls]="'accordion-body-standard-' + index">
+                                        <!-- Your accordion content... -->
+                                        <div
+                                            class="example-accordion-item-header"
+                                            style="color: black;"
+                                            (click)="toggleAccordion(index)">
                                             {{ item.title }}
-                                            <span class="example-accordion-item-description">
-                                                {{ accordionItem.expanded ? '-' : '+' }}
+                                            <span
+                                                class="example-accordion-item-description">
+                                                {{ accordionStates[index] ? '-'
+                                                : '+' }}
                                             </span>
                                         </div>
                                         <div
                                             class="example-accordion-item-body"
                                             role="region"
-                                            [style.display]="accordionItem.expanded ? '' : 'none'"
-                                            [attr.id]="'accordion-body-' + index"
-                                            [attr.aria-labelledby]="'accordion-header-' + index"
-                                            [innerHTML]="item.content"
-                                        >
+                                            [style.display]="accordionStates[index] ? '' : 'none'"
+                                            [attr.id]="'accordion-body-standard-' + index"
+                                            [attr.aria-labelledby]="'accordion-header-standard-' + index"
+                                            [innerHTML]="item.content">
                                             <p>{{ item.content}}</p>
                                         </div>
                                     </cdk-accordion-item>
                                 </cdk-accordion>
+
                             </ul>
                         </div>
                     </div>
 
-                    <div class="col-md-4" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2100">
-                        <div class="pb-10" style="border: 1px solid rgb(221, 221, 221); border-radius: 50px; border: 1px solid rgb(221, 221, 221); padding-bottom: 10px; margin-bottom: 10px;">
-                            <div class="inner-page-title2 text-center p-10" style="border-bottom: 1px solid #ddd;">
-                                <h2 class="s-20 w-600" style="margin-top: 1em; margin-bottom: 1em;">PREMIUM PACKAGE</h2>
-                                <a href="contact" class="btn r-04 btn--theme" style="padding: 12px 30px;">Get Quote</a>
+                    <div class="col-md-4">
+                        <div class="pb-10"
+                            style="border: 1px solid rgb(221, 221, 221); background: white; border-radius: 50px; border: 1px solid rgb(221, 221, 221); padding-bottom: 10px; margin-bottom: 10px;">
+                            <div class="inner-page-title2 text-center p-10"
+                                style="border-bottom: 1px solid #ddd;">
+                                <h2 class="s-20 w-600 text-uppercase"
+                                    style="margin-top: 1em; margin-bottom: 1em;">PREMIUM
+                                    PACKAGE</h2>
+                                    <p>Perfect for 2600 / sft</p>
+                                <a href="contact" class="btn r-04 btn--theme"
+                                    style="padding: 12px 30px;">Get Quote</a>
                             </div>
                             <ul class="accordion p-10">
                                 <cdk-accordion class="example-accordion">
                                     <cdk-accordion-item
-                                        *ngFor="let item of items | filter: 'premium' : 'package' ; let index = index"
+                                        *ngFor="let item of items | filter: [{ property: 'package', value: 'premium' }]; let index = index"
                                         #accordionItem="cdkAccordionItem"
                                         class="example-accordion-item"
                                         role="button"
                                         tabindex="0"
-                                        [attr.id]="'accordion-header-' + index"
-                                        [attr.aria-expanded]="accordionItem.expanded"
-                                        [attr.aria-controls]="'accordion-body-' + index"
-                                    >
-                                        <div class="example-accordion-item-header" style="color: black;" (click)="accordionItem.toggle()">
+                                        [attr.id]="'accordion-header-premium-' + index"
+                                        [attr.aria-expanded]="accordionStates[index]"
+                                        [attr.aria-controls]="'accordion-body-premium-' + index">
+                                        <!-- Your accordion content... -->
+                                        <div
+                                            class="example-accordion-item-header"
+                                            style="color: black;"
+                                            (click)="toggleAccordion(index)">
                                             {{ item.title }}
-                                            <span class="example-accordion-item-description">
-                                                {{ accordionItem.expanded ? '-' : '+' }}
+                                            <span
+                                                class="example-accordion-item-description">
+                                                {{ accordionStates[index] ? '-'
+                                                : '+' }}
                                             </span>
                                         </div>
                                         <div
                                             class="example-accordion-item-body"
                                             role="region"
-                                            [style.display]="accordionItem.expanded ? '' : 'none'"
-                                            [attr.id]="'accordion-body-' + index"
-                                            [attr.aria-labelledby]="'accordion-header-' + index"
+                                            [style.display]="accordionStates[index] ? '' : 'none'"
+                                            [attr.id]="'accordion-body-premium-' + index"
+                                            [attr.aria-labelledby]="'accordion-header-premium-' + index"
                                             [innerHTML]="item.content"
-                                        >
+                                            style="font-size: 16px;">
                                             <p>{{ item.content}}</p>
                                         </div>
                                     </cdk-accordion-item>
                                 </cdk-accordion>
+
                                 <!-- QUESTIONS CATEGORY #1 -->
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-4" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2100">
-                        <div class="pb-10" style="border: 1px solid rgb(221, 221, 221); border-radius: 50px; border: 1px solid rgb(221, 221, 221); padding-bottom: 10px; margin-bottom: 10px;">
-                            <div class="inner-page-title2 text-center p-10" style="border-bottom: 1px solid #ddd;">
-                                <h2 class="s-20 w-600" style="margin-top: 1em; margin-bottom: 1em;">LUXURY PACKAGE</h2>
-                                <a href="contact" class="btn r-04 btn--theme" style="padding: 12px 30px;">Get Quote</a>
+
+                    <div class="col-md-4">
+                        <div class="pb-10"
+                            style="border: 1px solid rgb(221, 221, 221); background: white; border-radius: 50px; border: 1px solid rgb(221, 221, 221); padding-bottom: 10px; margin-bottom: 10px;">
+                            <div class="inner-page-title2 text-center p-10"
+                                style="border-bottom: 1px solid #ddd;">
+                                <h2 class="s-20 w-600 text-uppercase"
+                                    style="margin-top: 1em; margin-bottom: 1em;">LUXURY
+                                    PACKAGE</h2>
+                                    <p>Perfect for 2900 / sft</p>
+                                <a href="contact" class="btn r-04 btn--theme"
+                                    style="padding: 12px 30px;">Get Quote</a>
                             </div>
                             <ul class="accordion p-10">
                                 <cdk-accordion class="example-accordion">
                                     <cdk-accordion-item
-                                        *ngFor="let item of items | filter: 'luxury' : 'package' ; let index = index"
+                                        *ngFor="let item of items | filter: [{ property: 'package', value: 'luxury' }]; let index = index"
                                         #accordionItem="cdkAccordionItem"
                                         class="example-accordion-item"
                                         role="button"
                                         tabindex="0"
-                                        [attr.id]="'accordion-header-' + index"
-                                        [attr.aria-expanded]="accordionItem.expanded"
-                                        [attr.aria-controls]="'accordion-body-' + index"
-                                    >
-                                        <div class="example-accordion-item-header" style="color: black;" (click)="accordionItem.toggle()">
+                                        [attr.id]="'accordion-header-premium-' + index"
+                                        [attr.aria-expanded]="accordionStates[index]"
+                                        [attr.aria-controls]="'accordion-body-premium-' + index">
+                                        <!-- Your accordion content... -->
+                                        <div
+                                            class="example-accordion-item-header"
+                                            style="color: black;"
+                                            (click)="toggleAccordion(index)">
                                             {{ item.title }}
-                                            <span class="example-accordion-item-description">
-                                                {{ accordionItem.expanded ? '-' : '+' }}
+                                            <span
+                                                class="example-accordion-item-description">
+                                                {{ accordionStates[index] ? '-'
+                                                : '+' }}
                                             </span>
                                         </div>
                                         <div
                                             class="example-accordion-item-body"
                                             role="region"
-                                            [style.display]="accordionItem.expanded ? '' : 'none'"
-                                            [attr.id]="'accordion-body-' + index"
-                                            [attr.aria-labelledby]="'accordion-header-' + index"
-                                            [innerHTML]="item.content"
-                                        >
+                                            [style.display]="accordionStates[index] ? '' : 'none'"
+                                            [attr.id]="'accordion-body-premium-' + index"
+                                            [attr.aria-labelledby]="'accordion-header-premium-' + index"
+                                            [innerHTML]="item.content">
                                             <p>{{ item.content}}</p>
                                         </div>
                                     </cdk-accordion-item>
@@ -130,31 +167,38 @@
     </div>
 </section>
 
-<section id="brands-1" class="pt-50 pb-50 brands-section" style="position: relative; background-image: url('assets/images/com-bg.jpg'); background-size: cover; background-position: center;">
+<section id="brands-1" class="pt-50 pb-50 brands-section"
+    style="position: relative; background-image: url('https://ik.imagekit.io/habitro/bg/associate-bg.jpg?updatedAt=1707144456375'); background-size: cover; background-position: center;">
     <div style="position: relative; z-index: 1;">
         <div class="container">
             <!-- BRANDS TITLE -->
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-9">
                     <div class="inner-page-title">
-                        <h2 class="s-38 w-600 color--white">Our Associate Partners</h2>
+                        <h2 class="s-38 w-600 color--white py-20">Our Associate
+                            Partners</h2>
                         <div class="bottom-line"></div>
                     </div>
                 </div>
             </div>
             <div class="row">
-              <owl-carousel-o [options]="owlCarouselOptions">
-                  <ng-container *ngFor="let item of brand">
-                      <ng-template carouselSlide>
-                          <div class="img-block video-preview" style="padding: 10px;">
-                                  <img class="img-fluid" [src]="item.image || 'assets/images/test/1.svg'" alt="video-preview" style="margin-bottom: 10px;" />
-                          </div>
-                      </ng-template>
-                  </ng-container>
-              </owl-carousel-o>
-            </div>          
+                <owl-carousel-o [options]="owlCarouselOptions">
+                    <ng-container *ngFor="let item of brand">
+                        <ng-template carouselSlide>
+                            <div class="img-block video-preview"
+                                style="padding: 10px;">
+                                <img class="img-fluid"
+                                    [src]="item.image || 'assets/images/test/1.svg'"
+                                    alt="video-preview"
+                                    style="margin-bottom: 10px;width: 200px; height:200px;" />
+                            </div>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
         </div>
     </div>
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 0;"></div>
+    <div
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 0;"></div>
 </section>
 <app-calltoaction [copyhead]="copyhead"></app-calltoaction>

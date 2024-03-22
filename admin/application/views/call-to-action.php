@@ -2,15 +2,56 @@
     <div class="container-fluid">
         <div class="form-head d-md-flex mb-sm-4 mb-3 align-items-start">
             <div class="me-auto d-lg-block d-block">
-                <h2 class="text-black font-w600">Call to action content</h2>
-                <?php if($this->session->flashdata('success')): ?><?php echo '
-                    <div class="alert alert-success alert-dismissible fade show">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close">
-                    </button>
-                    <strong>Success!</strong> '.$this->session->flashdata('success').'
-                    </div>'; ?>
+                <h2 class="text-black font-w600">CTA Details</h2>
+                <?php if ($this->session->flashdata('Error')): ?>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            toastr.error('<?php echo $this->session->flashdata('Error'); ?>', 'Deleted!', {
+                                positionClass: "toast-top-right",
+                                timeOut: 5e3,
+                                closeButton: !0,
+                                debug: !1,
+                                newestOnTop: !0,
+                                progressBar: !0,
+                                preventDuplicates: !0,
+                                onclick: null,
+                                showDuration: "300",
+                                hideDuration: "1000",
+                                extendedTimeOut: "1000",
+                                showEasing: "swing",
+                                hideEasing: "linear",
+                                showMethod: "fadeIn",
+                                hideMethod: "fadeOut",
+                                tapToDismiss: !1
+                            });
+                        });
+                    </script>
                 <?php endif; ?>
-
+                <?php if ($this->session->flashdata('success')): ?>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            toastr.success('<?php echo $this->session->flashdata('success'); ?>', 'success!', {
+                                positionClass: "toast-top-right",
+                                timeOut: 500000000,
+                                closeButton: !0,
+                                debug: !1,
+                                newestOnTop: !0,
+                                progressBar: !0,
+                                positionClass: "toast-top-right",
+                                preventDuplicates: !0,
+                                onclick: null,
+                                showDuration: "300",
+                                hideDuration: "1000",
+                                extendedTimeOut: "1000",
+                                showEasing: "swing",
+                                hideEasing: "linear",
+                                showMethod: "fadeIn",
+                                hideMethod: "fadeOut",
+                                tapToDismiss: !1
+                            });
+                        });
+                    </script>
+                <?php endif; ?>
             </div>
             <a href="#" id="refreshBtn" class="btn btn-primary rounded light">Refresh</a>
         </div>
@@ -38,7 +79,7 @@
                                                     <?php echo $calltoaction['copyhead']; ?>
                                                 </td>
                                                 <td class="text-nowrap">
-                                                    <a href="<?php echo base_url();?>welcome/update_cta/<?php echo $calltoaction['id']; ?>"
+                                                    <a href="<?php echo base_url();?>call-to-action/update/<?php echo $calltoaction['id']; ?>"
                                                         class="btn btn-warning btn-sm content-icon">
                                                         <i class="fa fa-edit"></i>
                                                     </a>

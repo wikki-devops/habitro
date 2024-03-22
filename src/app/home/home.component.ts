@@ -1,8 +1,9 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, AfterViewInit} from '@angular/core';
 import { DatabaseService } from '../database.service';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl, Title, Meta} from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ChangeDetectorRef } from '@angular/core';
+import { NgZone } from '@angular/core';
 
 
 declare var $: any;
@@ -12,7 +13,7 @@ declare var $: any;
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
 
   bannerheading = '';
   bannerpara = '';
@@ -41,10 +42,10 @@ export class HomeComponent implements OnInit{
         items: 1
       },
       400: {
-        items: 2
+        items: 1
       },
       740: {
-        items: 3
+        items: 2
       },
       940: {
         items: 3
@@ -57,11 +58,17 @@ export class HomeComponent implements OnInit{
   }
 customOptions: OwlOptions;
 
-  constructor(private DatabaseService: DatabaseService, private sanitizer: DomSanitizer,private cdr: ChangeDetectorRef) {}
-
+  constructor(private DatabaseService: DatabaseService, private sanitizer: DomSanitizer,private cdr: ChangeDetectorRef, private zone: NgZone, private titleService: Title, private metaService: Meta) {  
+  }
+  
   ngOnInit(): void {
     this.getBannerHeading();  
     this.getcalltoaction();
+    this.titleService.setTitle('Welcome to Habitro | Home');
+
+    // Set or update meta tags
+    this.metaService.updateTag({ name: 'description', content: 'This is a dynamic meta description.' });
+    this.metaService.updateTag({ name: 'keywords', content: 'angular, meta tags, dynamic' });
 
     this.DatabaseService.getcompany().subscribe(data => {
       this.company = data;
@@ -108,6 +115,5 @@ customOptions: OwlOptions;
     setTimeout(() => {
       $('.owl-carousel').owlCarousel(this.owlCarouselOptions);
     });
-  }
-  
+  }  
 }

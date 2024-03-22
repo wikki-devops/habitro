@@ -27,5 +27,39 @@
     .bottom-line{
         margin: 2px !important; width: 100px;
     }
+    .owncontact{
+      padding: 30px !important;
+    }
+    .form-holder{
+      padding: 30px !important;
+    }
+    .contact-form{
+      padding: 20px 0px !important;
+    }
+  
   }
     
+  .owncontact{
+    padding: 100px;background-color: rgb(249, 246, 246);
+  }
+  .form-holder{
+    padding: 100px 50px 50px;
+  }
+  .bottom-line{
+    margin: 2px !important; width: 100px;
+  }
+  .pt-10{
+    padding-top: 10px;
+  }
+  .error-message {
+    color: red;
+    font-size: small;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+  .contact-form .form-control, .contact-form .form-select{
+    margin-bottom: 10px;
+  }
+  #contacts-1 .contact-form p{
+    font-size: 1rem !important;
+  }

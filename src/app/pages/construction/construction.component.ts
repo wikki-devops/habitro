@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit, Renderer2, ViewChildren, QueryList, ElementRef, ChangeDetectorRef } from "@angular/core";
 import { DatabaseService } from "../../database.service";
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser'; // Import SafeHtml
+
 
 declare var $: any;
 
@@ -29,7 +31,7 @@ export class ConstructionComponent implements OnInit {
     touchDrag: false,
     pullDrag: false,
     dots: false,
-    navSpeed: 700,
+    navSpeed: 400,
     navText: ['', ''],
     responsive: {
       0: {
@@ -42,20 +44,28 @@ export class ConstructionComponent implements OnInit {
         items: 4
       },
       940: {
-        items: 5
+        items: 6
       }
     },
     nav: true,
     autoplay: true,
-    autoplayTimeout: 3000
+    autoplayTimeout: 5000
   }
+
+  accordionStates: boolean[] = [];
 
 
   constructor(
     private DatabaseService: DatabaseService,
     private renderer: Renderer2,
-    private el: ElementRef
+    private el: ElementRef,
+    private sanitizer: DomSanitizer
   ) { }
+
+  sanitizeHtml(html: string): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
+  }
+
 
   ngOnInit(): void {
     this.getBannerHeading();
@@ -71,7 +81,14 @@ export class ConstructionComponent implements OnInit {
         this.initOwlCarousel();
       });
     });
+    this.items.forEach(() => {
+      this.accordionStates.push(false);
+    });
+    
 
+  }
+  toggleAccordion(index: number) {
+    this.accordionStates[index] = !this.accordionStates[index];
   }
 
 
@@ -100,4 +117,5 @@ export class ConstructionComponent implements OnInit {
     const owl = $('.owl-carousel');
     owl.owlCarousel(this.owlCarouselOptions);
   }
-}
+  
+  }

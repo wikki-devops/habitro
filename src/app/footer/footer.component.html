@@ -1,79 +1,72 @@
-<footer id="footer-3" class="footer" data-aos="zoom-in" data-aos-easing="linear" style="background-image: url('https://ik.imagekit.io/habitro/bg/footer-bg.png?updatedAt=1707132870706');" >
+<footer id="footer-3" class="footer" style="background-image: url(https://themewant.com/products/html/innovat/assets/images/testimonials/01.jpg);
+background-position: center;" >
     <div class="container-fluid" >
         <div class="row" *ngIf="company.length > 0">
             <div class="col-xl-4 col-md-4 col-sm-12 col-xs-12" style="border-right: 1px solid #e2e2e2; padding: 0px;">
                 <div class="footer-info" style="margin-bottom: 40px;">
-                    <img class="footer-logo" src="{{ company[1].content}}" alt="footer-logo" />
-                    <p class="s-18 w-400" style="color: #6c757d;">
-                        <i class="fa-solid fa-location-dot color-primary"></i>&nbsp;&nbsp;{{ company[3].content}}
-                        <span style="color: brown;">Landmark: </span>Next to KFC & Above Levis Showroom
-                    </p>
+                    <img class="footer-logo" src="{{ company[1].content}}" alt="footer-logo" data-aos="zoom-in" data-aos-easing="linear"  />
+                    <p data-aos="zoom-in" data-aos-easing="linear" >With an emphasis on Quality, Trust & Transparency, we make construction, interiors and renovations hassle-free & affordable for you, for your personal and professional spaces.</p>
+                    <ul class="footer-socials ico-30" data-aos="zoom-in" data-aos-easing="linear"  >
+                        <li>
+                            <a href="{{ company[5].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/facebook.png" width="32px" /></a>
+                        </li>
+                        <li>
+                            <a href="{{ company[6].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/instagram.png" width="32px" /></a>
+                        </li>
+                        <li>
+                            <a href="{{ company[7].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/linkedin.png" width="32px" /></a>
+                        </li>
+                        <li>
+                            <a href="{{ company[8].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/youtube.png" width="32px" /></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12" style="padding: 0px;">
+            <div class="col-xl-8 col-md-8 col-sm-12 col-xs-12" style="padding: 0px;">
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="footer-links fl-1">
-                            <h6 class="s-17 w-700">Sitemap</h6>
-        
+                            <h6 class="s-17 w-700" data-aos="zoom-in" data-aos-easing="linear" >Recent Blogs</h6>
                             <ul class="foo-links clearfix">
-                                <li>
-                                    <p><a href="">About Us</a></p>
+                                <li data-aos="zoom-in" data-aos-easing="linear"  *ngFor="let item of blogs | slice:0:4">
+                                    <p><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;<a [routerLink]="'/blog/' + item.id" target="_blank">{{ truncateTitle(item.title, 3) }}</a></p>
                                 </li>
-                                <li>
-                                    <p><a href="legal-information">Legal Information</a></p>
-                                </li>
-                                <li>
-                                    <p><a href="blogs">Our Blog</a></p>
-                                </li>
-                                <li>
-                                    <p><a href="contact">Contact Us</a></p>
+                                <li data-aos="zoom-in" data-aos-easing="linear" >
+                                    <p><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;<a href="blogs">All blogs</a></p>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12" >
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12" >
                         <div class="footer-links fl-2" >
-                            <h6 class="s-17 w-700">Service</h6>
+                            <h6 class="s-17 w-700" data-aos="zoom-in" data-aos-easing="linear" >Service</h6>
         
                             <ul class="foo-links clearfix">
-                                <li *ngFor="let menu of menu">
-                                    <p><a href="{{ menu.slug }}">{{ menu.menu}}</a></p>
+                                <li data-aos="zoom-in" data-aos-easing="linear"  *ngFor="let menu of menu">
+                                    <p><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;<a href="{{ menu.slug }}">{{ menu.menu}}</a></p>
                                 </li>
                             </ul>
                         </div>        
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                        <div class="footer-info" style="border-bottom: none;" >
-                            <h6 class="s-17 w-700">Contact</h6>
+                    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                        <div class="footer-info" style="border-bottom: none; width: 270px;" >
+                            <h6 class="s-17 w-700" data-aos="zoom-in" data-aos-easing="linear" >Contact</h6>
                             <ul class="mb-30">
-                                <li >
+                                <p data-aos="zoom-in" data-aos-easing="linear" >{{company[3].content}}</p>
+                                <li data-aos="zoom-in" data-aos-easing="linear" >
                                     <a href="tel:{{ company[4].content }}">
                                         <i class="fa-solid fa-phone color-primary"></i>&nbsp;&nbsp;{{ company[4].content }}
                                     </a>
                                 </li>
-                                <li >
+                                <li data-aos="zoom-in" data-aos-easing="linear"  >
                                     <a href="mailto:{{ company[2].content }}">
                                         <i class="fa-solid fa-envelope color-primary"></i>&nbsp;&nbsp;{{ company[2].content }}
                                     </a>
                                 </li>
                             </ul>
                                                         
-                            <ul class="footer-socials ico-30" >
-                                <li>
-                                    <a href="{{ company[5].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/facebook.png" width="32px" /></a>
-                                </li>
-                                <li>
-                                    <a href="{{ company[6].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/instagram.png" width="32px" /></a>
-                                </li>
-                                <li>
-                                    <a href="{{ company[7].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/linkedin.png" width="32px" /></a>
-                                </li>
-                                <li>
-                                    <a href="{{ company[8].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/youtube.png" width="32px" /></a>
-                                </li>
-                            </ul>
+                            
                         </div>
                     </div>                    
                 </div>
@@ -81,11 +74,11 @@
             </div>
         </div>
         <hr />
-        <div class="bottom-footer" style="padding: 10px 40px">
+        <div class="bottom-footer">
             <div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
                 <div class="col">
                     <div class="footer-copyright">
-                        <p class="p-sm">&#169; {{copyrightNotice}} Habitro. All Rights Reserved</p>
+                        <p class="p-sm" style="text-align: left;">&#169; {{copyrightNotice}} Habitro. All Rights Reserved</p>
                     </div>
                 </div>
 

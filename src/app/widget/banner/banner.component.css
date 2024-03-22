@@ -10,6 +10,8 @@
   @media only screen and (max-width: 490px) {
     #hero-1 {
       padding-top: 20px !important;
+      background-repeat: no-repeat !important;
+      padding-bottom: 0px !important;
     }
     .signinform{
       padding: 100px !important;
@@ -45,8 +47,6 @@
   }
   .btn--theme {
     color: #fff!important;
-    border-color: #f74780!important;
-    background-color: #f74780!important;
     width: 100%;
     margin: 20px 0px;
   }
@@ -67,4 +67,25 @@
   }
   .hero-section p.s-24 {
   margin-bottom: 6px !important;
+  }
+  .form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: purple;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(120, 81, 169,0.5);
+  }
+  .error-message {
+    color: red;
+    font-size: small;
+  }
+  .toast-success {
+    font-size: 14px;  
+    background-color: blue; 
+  }
+  
+  @media only screen and (max-width: 900px) {
+  .hero-section p{
+    font-size: 14px !important;
+    }
   }

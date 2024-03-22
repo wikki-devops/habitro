@@ -1,29 +1,30 @@
-<div [hidden]="hideLoading" id="loading" class="loading--theme">
-    <div id="loading-center"><img src="assets/images/loader.svg" width="100px" /></div>
+<div id="loading" class="loading--theme">
+    <div id="loading-center"><img class="loader" src="assets/images/loader.png"/></div>
 </div>
-<div id="page" class="container-fluid page font--jakarta">
-    <header id="header" class="tra-menu navbar-light white-scroll">
-        <div class="header-wrapper" *ngIf="company.length > 0">
+
+<div id="page" class="container-fluid page">
+    <header id="header" class="tra-menu navbar-light white-scroll" >
+        <div class="header-wrapper">
             <div class="wsmobileheader clearfix">
-                <span class="smllogo"><img src="{{ company[1].content }}" alt="habitro-logo" /></span>
+                <span class="smllogo"><a href="home"><img *ngIf="company.length > 0" src="{{ company[1].content }}" alt="habitro-logo" /></a></span>
                 <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
             </div>
 
             <div class="wsmainfull menu clearfix">
                 <div class="wsmainwp clearfix" style="text-align: center; display: contents;">
                     <div class="desktoplogo">
-                        <a href="home" class="logo-black"><img style="padding: 10px 0px;" src="{{ company[1].content }}" alt="habitro-logo" /></a>
+                        <a href="home" class="logo-black"><img *ngIf="company.length > 0" style="padding: 10px 0px;" src="{{ company[1].content }}" alt="habitro-logo" /></a>
                     </div>
 
                     <div class="desktoplogo">
-                        <a href="home" class="logo-white"><img src="{{ company[0].content }}" alt="habitro-logo" /></a>
+                        <a href="home" class="logo-white"><img *ngIf="company.length > 0" src="{{ company[0].content }}" alt="habitro-logo" /></a>
                     </div>
 
                     <nav class="wsmenu clearfix">
                         <ul class="wsmenu-list nav-theme">
                             <li *ngFor="let menu of menu" class="nl-simple" aria-haspopup="true"><a href="{{ menu.slug }}" class="h-link">{{ menu.menu}}</a></li>
                             <li class="nl-simple" aria-haspopup="true">
-                                <a href="contact" class="btn r-04 btn--theme hover--tra-white last-link"><i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Talk to an Expert</a>
+                                <a *ngIf="company.length > 0" href="tel:{{ company[4].content }}" class="btn r-04 btn--theme hover--tra-white last-link"><i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Talk to an Expert</a>
                             </li>
                         </ul>
                     </nav>

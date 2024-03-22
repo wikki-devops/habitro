@@ -2,16 +2,13 @@
     <div class="container-fluid">
         <div class="form-head d-md-flex mb-sm-4 mb-3 align-items-start">
             <div class="me-auto d-lg-block d-block">
-                <h2 class="text-black font-w600">Edt Company Profile</h2>
+                <h2 class="text-black font-w600">Update Company Profile</h2>
             </div>
             <a href="#" id="refreshBtn" class="btn btn-primary rounded light">Refresh</a>
         </div>
         <div class="row">
             <div class="col-xl-12 col-lg-12">
                 <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">New Content</h4>
-                    </div>
                     <div class="card-body">
                         <div class="basic-form">
                             <?php echo form_open_multipart('welcome/update_profile/' . $company['id']); ?>
@@ -37,7 +34,7 @@
                                 <label class="col-sm-3 col-form-label form-label">Content or Image Url</label>
                                 <div class="col-sm-9">
                                     <input type="text" value="<?php echo $company['content']; ?>" name="content"
-                                        class="form-control" id="imageUrlInput" placeholder="Enter Content">
+                                        class="form-control" id="imageUrlInput" placeholder="Enter Content" required>
                                 </div>
                             </div>
                             <?php if ($company['content_type'] == 'Image'): ?>

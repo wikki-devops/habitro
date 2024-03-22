@@ -1,0 +1,36 @@
+.faqs-section .tabs-1 li {
+    margin: 10px 6px !important;
+  }
+  .faqs-section .tabs-1 li{
+    padding: 15px !important;
+  }
+  .faqs-section .tabs-1 li.current p, .faqs-section .tabs-1 li.current span {
+    color: #fff !important;
+  }
+  .faqs-section .tabs-1 {
+    margin: 0px;
+}
+.faqs-section .tabs-1 li p{
+    margin-top: 0px;
+}
+.faqs-section .tabs-1 li{
+    min-width: fit-content;
+}
+.pricing-features li {
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #0000001A;
+}
+.faqs-section .tabs--theme .tabs-1 li.current, .faqs-section .tabs--theme .tabs-1 li.current:hover {
+  background-color: #fff;
+  border-color: #7851A9 !important
+}
+
+.pricing-features li {
+  padding: 10px 18px !important;
+  border-bottom: 1px solid #7851A9 !important;
+  list-style-type: disclosure-closed !important;
+}

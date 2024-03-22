@@ -6,10 +6,20 @@ class GetData extends CI_Model
         $this->load->database();
         return $this->db->get("renovation")->result_array();
     }
-    public function getconstruction()
+    public function getconstruction($id = false, $limit = false, $offset = false)
     {
         $this->load->database();
-        return $this->db->get("package")->result_array();
+        if ($limit) {
+            $this->db->limit($limit, $offset);
+        }
+
+        if ($id === false) {
+            $query = $this->db->get("package");
+            return $query->result_array();
+        }
+
+        $query = $this->db->get_where("package", ["id" => $id]);
+        return $query->row_array();
     }
     public function getmenu()
     {
@@ -158,7 +168,7 @@ class GetData extends CI_Model
         $data = [
             "thumbnail" => $this->input->post("thumbnail"),
             "video" => $this->input->post("video"),
-            "name" => $this->input->post("name"),
+            "testimonial" => $this->input->post("testimonial"),
             "company" => $this->input->post("company"),
         ];
         return $this->db->insert("testimonials", $data);
@@ -178,8 +188,6 @@ class GetData extends CI_Model
             "image" => $this->input->post("image"),
             "content" => $this->input->post("content"),
             "descripition" => $this->input->post("descripition"),
-            "content_2" => $this->input->post("content_2"),
-            "descripition_2" => $this->input->post("descripition_2"),
         ];
         return $this->db->insert("residentialcard", $data);
     }
@@ -210,7 +218,6 @@ class GetData extends CI_Model
         ];
         $this->db->where("id", $this->input->post("id"));
         return $this->db->update("commercial", $data);
-
     }
     public function add_tail()
     {
@@ -270,35 +277,187 @@ class GetData extends CI_Model
     }
     public function get_admin_data()
     {
-        $id = $this->session -> userdata('user_id');
-        if($id === FALSE){
+        $id = $this->session->userdata('user_id');
+        if ($id === FALSE) {
             $query = $this->db->get('users');
-            return $query->result_array(); 
+            return $query->result_array();
         }
 
         $query = $this->db->get_where('user', array('id' => $id));
         return $query->row_array();
     }
 
-    public function change_password($new_password){
+    public function change_password($new_password)
+    {
 
         $data = array(
             'password' => md5($new_password)
-            );
+        );
         $this->db->where('id', $this->session->userdata('user_id'));
         return $this->db->update('user', $data);
     }
     public function match_old_password($password)
     {
-        $id = $this->session -> userdata('user_id');
-        if($id === FALSE){
+        $id = $this->session->userdata('user_id');
+        if ($id === FALSE) {
             $query = $this->db->get('user');
-            return $query->result_array(); 
+            return $query->result_array();
         }
 
         $query = $this->db->get_where('user', array('password' => $password));
         return $query->row_array();
-
     }
+
+    public function update_menu($id)
+    {
+        $this->load->database();
+        $data = [
+            "meta_title" => $this->input->post("meta_title"),
+            "meta_content" => $this->input->post("meta_content"),
+        ];
+        $this->db->where("id", $id);
+        return $this->db->update("menu", $data);
+    }
+    public function update_package($id)
+    {
+        $this->load->database();
+        $data = [
+            "title" => $this->input->post("title"),
+            "content" => $this->input->post("content"),
+        ];
+        $this->db->where("id", $id);
+        return $this->db->update("package", $data);
+    }
+
+    public function addpackage($data)
+    {
+        $this->load->database();
+
+        $this->db->insert('package', $data);
+    }
+
+
+    public function add_partner()
+    {
+        $this->load->database();
+        $data = [
+            "image" => $this->input->post("image"),
+        ];
+        return $this->db->insert("brands", $data);
+    }
+
+    public function getresidentialbrands()
+    {
+        $this->load->database();
+        return $this->db->get("residentialbrands")->result_array();
+    }
+    public function add_residentialpartner()
+    {
+        $this->load->database();
+        $data = [
+            "image" => $this->input->post("image"),
+        ];
+        return $this->db->insert("residentialbrands", $data);
+    }
+
+    public function getblogs()
+    {
+        $this->load->database();
+        return $this->db->get("blogs")->result_array();
+    }
+
+    public function addblog()
+    {
+        $this->load->database();
+        $data = [
+            "image" => $this->input->post("image"),
+            "title" => $this->input->post("title"),
+            "content" => $this->input->post("content"),
+        ];
+        return $this->db->insert("blogs", $data);
+    }
+    public function getleadform($id = false, $limit = false, $offset = false)
+    {
+        $this->load->database();
+        if ($limit) {
+            $this->db->limit($limit, $offset);
+        }
+
+        if ($id === false) {
+            $query = $this->db->get("leadform");
+            return $query->result_array();
+        }
+
+        $query = $this->db->get_where("leadform", ["id" => $id]);
+        return $query->row_array();
+    }
+    public function update_lead($id)
+    {
+        $this->load->database();
+        $data = [
+            "name" => $this->input->post("name"),
+            "phone" => $this->input->post("phone"),
+            "email" => $this->input->post("email"),
+            "status" => $this->input->post("status"),
+        ];
+        $this->db->where("id", $this->input->post("id"));
+        return $this->db->update("leadform", $data);
+    }
+    public function getpricing($id = false, $limit = false, $offset = false)
+    {
+        $this->load->database();
+        if ($limit) {
+            $this->db->limit($limit, $offset);
+        }
+
+        if ($id === false) {
+            $query = $this->db->get("pricing_1bhk");
+            return $query->result_array();
+        }
+
+        $query = $this->db->get_where("pricing_1bhk", ["id" => $id]);
+        return $query->row_array();
+    }
+    public function getmasterpricing()
+    {
+        $this->load->database();
+        return $this->db->get("pricing_1bhk")->result_array();
+    }
+
+    public function update_pricing($id)
+    {
+        $this->load->database();
+        $data = [
+            "includes" => $this->input->post("includes"),
+            "pricing" => $this->input->post("pricing"),
+        ];
+        $this->db->where("id", $id);
+        return $this->db->update("pricing_1bhk", $data);
+    }
+    public function getgallery($id = false, $limit = false, $offset = false)
+    {
+        $this->load->database();
+        if ($limit) {
+            $this->db->limit($limit, $offset);
+        }
+
+        if ($id === false) {
+            $query = $this->db->get("galleries");
+            return $query->result_array();
+        }
+
+        $query = $this->db->get_where("galleries", ["id" => $id]);
+        return $query->row_array();
+    }
+    public function update_gallery()
+    {
+        $this->load->database();
+        $data = [
+            "image" => $this->input->post("image"),
+            "data_filter" => $this->input->post("data_filter"),
+        ];
+        return $this->db->insert("galleries", $data);
+    }
+
 
 }

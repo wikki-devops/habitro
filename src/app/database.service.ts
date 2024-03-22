@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DatabaseService {
+  submitFormData(value: any, arg1: string) {
+    throw new Error('Method not implemented.');
+  }
   getBannerHeadingFromDatabase() {
     throw new Error('Method not implemented.');
   }
@@ -62,5 +65,20 @@ export class DatabaseService {
   getbrand(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}?table=brands`);
   }
+  getresidentialbrands(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}?table=residentialbrands`);
+  }
+  getblogs(blogId?: number): Observable<any> {
+    const url = blogId ? `${this.apiUrl}?table=blogs&id=${blogId}` : `${this.apiUrl}?table=blogs`;
+    return this.http.get<any>(url);
+  }
+  getgalleries(blogId?: number): Observable<any> {
+    const url = blogId ? `${this.apiUrl}?table=blogs&id=${blogId}` : `${this.apiUrl}?table=galleries`;
+    return this.http.get<any>(url);
+  }
+  getpricing(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}?table=pricing_1bhk`);
+  }
+    
 }
 

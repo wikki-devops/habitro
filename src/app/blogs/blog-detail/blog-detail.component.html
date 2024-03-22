@@ -1,0 +1,48 @@
+<section id="hero-1" class="bg--scroll hero-section" style="background-image: url(https://figtheme.com/html/arckytec/assets/images/backgrounds/main-slider-2-1.jpg);background-position: center; min-height: 450px; background-position-y: -150px;">
+    <div class="container-fluid" style="padding: 30px 55px;">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-12" data-aos="fade-left">
+                <div class="hero-1-txt color--white">
+                    <h2 class="s-38 w-600 py-20 text-center">Our Recent Blogs</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="single-post" class="pb-90 pt-40 blog-page-section">
+    <div class="container" *ngIf="blogs">
+        <div class="row justify-content-center">
+            <!-- SINGLE POST CONTENT -->
+            <div class="col-xl-10">
+                <div class="post-content">
+                    <!--  SINGLE POST TITLE -->
+                    <div class="single-post-title text-center">
+                        <!-- Post Tag -->
+                        <!-- Title -->
+                        <h2 class="s-46 w-700">{{ blogs?.title }}</h2>
+
+                        <!-- Post Meta -->
+                        <div class="blog-post-meta mt-35">
+                            <ul class="post-meta-list ico-10">
+                                <li><p class="p-md w-500">By Habitro</p></li>
+                                <li class="meta-list-divider">
+                                    <p><span class="flaticon-minus"></span></p>
+                                </li>
+                                <li><p class="p-md">{{blogs?.date}}</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END SINGLE POST TITLE -->
+
+                    <!-- SINGLE POST IMAGE -->
+                    <div class="blog-post-img py-50">
+                        <img class="img-fluid r-16" src="{{blogs?.image}}" style="width: 100%; height: 500px;" alt="blog-post-image" />
+                    </div>
+
+                    <!-- SINGLE POST TEXT -->
+                    <div class="single-post-txt" [innerHTML]="blogs.content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

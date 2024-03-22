@@ -18,11 +18,7 @@
 		/*----------------------------------------------------*/
 		/*	Modal Window
 		/*----------------------------------------------------*/
-			
-		setTimeout(function () {
-		    $(".modal:not(.auto-off)").modal("show");
-		},3600);
-				
+							
 	});
 
 
@@ -95,15 +91,32 @@
 
 		$('ul.tabs-1 li').on('click', function(){
 			var tab_id = $(this).attr('data-tab');
-
+			
+			// Remove 'current' class from all first-level tab links and content
 			$('ul.tabs-1 li').removeClass('current');
+			$('ul.tabs-2 li').removeClass('current');
 			$('.tab-content').removeClass('current');
-
+			
+			// Add 'current' class to the clicked first-level tab link
 			$(this).addClass('current');
-			$("#"+tab_id).addClass('current');
+			// Show the corresponding first-level tab content
+			$("#" + tab_id).addClass('current');
 		});
-
-
+	
+		// Click event handler for the second level of tabs
+		$('ul.tabs-2 li').on('click', function(){
+			var tab_id = $(this).attr('data-tab');
+			
+			// Remove 'current' class from all second-level tab links and content
+			$('ul.tabs-2 li').removeClass('current');
+			$('.tab-content').removeClass('current');
+			
+			// Add 'current' class to the clicked second-level tab link
+			$(this).addClass('current');
+			// Show the corresponding second-level tab content
+			$("#" + tab_id).addClass('current');
+		});
+			
 		/*----------------------------------------------------*/
 		/*	Single Image Lightbox
 		/*----------------------------------------------------*/
