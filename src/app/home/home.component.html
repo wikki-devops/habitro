@@ -1,3 +1,6 @@
+<div id="loading" class="loading--theme">
+    <div id="loading-center"><img class="loader" src="assets/images/loader.png"/></div>
+</div>
 <app-banner [bannerheading]="bannerheading" [bannerpara]="bannerpara" [bannerimage]="bannerimage" [displayForm]="displayForm"></app-banner>
 <!-- About Section -->
 <section id="lnk-2" class="bg--white-400 ct-04 content-section division">
@@ -43,7 +46,7 @@
             </div>
             <div class="col-md-6 order-md-2 wow fadeInLeft">
                 <div class="img-block">
-                    <img class="img-fluid shining-effect" src="https://ik.imagekit.io/habitro/about-habitro.jpg?updatedAt=1706606620928" alt="content-image" />
+                    <img class="img-fluid shining-effect" src="https://ik.imagekit.io/habitro/tr:w-680,h-680/about-habitro.jpg?updatedAt=1706606620928" alt="content-image" />
                 </div>
             </div>
         </div>
@@ -93,7 +96,7 @@
                 <div class="col-xl-12">
                     <div id="residential" class="tab-content current">
                         <div class="row">
-                            <div class="col-md-2 col-6" *ngFor="let item of service | filter: [{ property: 'data_filter', value: 'residential' }];">
+                            <div class="col-md-2 col-4" *ngFor="let item of service | filter: [{ property: 'data_filter', value: 'residential' }];">
                                 <div class="ico-50 r-25" style="text-align: center;">
                                     <img class="img-fluid" src="assets/images/icons/{{item.image}}" alt="habitro-service" />
                                     <p>{{item.service_name}}</p>
@@ -103,7 +106,7 @@
                     </div>
                     <div id="commercial" class="tab-content">
                         <div class="row">
-                            <div class="col-md-2 col-6" *ngFor="let item of service | filter: [{ property: 'data_filter', value: 'commercial' }];">
+                            <div class="col-md-2 col-4" *ngFor="let item of service | filter: [{ property: 'data_filter', value: 'commercial' }];">
                                 <div class="ico-50 r-25" style="text-align: center;">
                                     <img class="img-fluid" src="assets/images/icons/{{item.image}}" alt="habitro-service" />
                                     <p>{{item.service_name}}</p>
@@ -113,7 +116,7 @@
                     </div>
                     <div id="construction" class="tab-content">
                         <div class="row">
-                            <div class="col-md-2 col-6" *ngFor="let item of service | filter: [{ property: 'data_filter', value: 'construction' }];">
+                            <div class="col-md-2 col-4" *ngFor="let item of service | filter: [{ property: 'data_filter', value: 'construction' }];">
                                 <div class="ico-50 r-25" style="text-align: center;">
                                     <img class="img-fluid" src="assets/images/icons/{{item.image}}" alt="habitro-service" />
                                     <p>{{item.service_name}}</p>
@@ -157,7 +160,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
                 <div class="inner-page-title">
-                    <h2 class="s-38 w-600 py-20" data-aos="fade-up">Hear From Our Clients</h2>
+                    <h2 class="s-38 w-600 py-20">Hear From Our Clients</h2>
                     <div class="bottom-line"></div>
                 </div>
             </div>

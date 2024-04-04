@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class DatabaseinsertService {
 
-  private apiUrl = 'https://demo.godparticles.uk/database/habitro-insert.php'; // PHP API URL
+  private apiUrl = 'https://www.habitro.com/database/habitro-insert.php'; // PHP API URL
 
   constructor(private http: HttpClient) { }
   submitFormData(data: any, table: string): Observable<any> {

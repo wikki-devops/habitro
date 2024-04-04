@@ -1,7 +1,3 @@
-<div id="loading" class="loading--theme">
-    <div id="loading-center"><img class="loader" src="assets/images/loader.png"/></div>
-</div>
-
 <div id="page" class="container-fluid page">
     <header id="header" class="tra-menu navbar-light white-scroll" >
         <div class="header-wrapper">
@@ -22,7 +18,12 @@
 
                     <nav class="wsmenu clearfix">
                         <ul class="wsmenu-list nav-theme">
-                            <li *ngFor="let menu of menu" class="nl-simple" aria-haspopup="true"><a href="{{ menu.slug }}" class="h-link">{{ menu.menu}}</a></li>
+                            <li class="nl-simple" aria-haspopup="true"><a href="residential" class="h-link">Residential</a></li>
+                            <li class="nl-simple" aria-haspopup="true"><a href="commercial" class="h-link">Commercial</a></li>
+                            <li class="nl-simple" aria-haspopup="true"><a href="construction" class="h-link">Construction</a></li>
+                            <li class="nl-simple" aria-haspopup="true"><a href="renovation" class="h-link">Renovation</a></li>
+                            <li class="nl-simple" aria-haspopup="true"><a href="gallery-wall" class="h-link">Gallery Wall</a></li>
+                            <li class="nl-simple" aria-haspopup="true"><a href="contact" class="h-link">Contact</a></li>
                             <li class="nl-simple" aria-haspopup="true">
                                 <a *ngIf="company.length > 0" href="tel:{{ company[4].content }}" class="btn r-04 btn--theme hover--tra-white last-link"><i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Talk to an Expert</a>
                             </li>

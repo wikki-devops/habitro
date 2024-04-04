@@ -13,7 +13,7 @@ export class DatabaseService {
     throw new Error('Method not implemented.');
   }
 
-  private apiUrl = 'https://demo.godparticles.uk/database/habitro-database.php'; // PHP API URL
+  private apiUrl = 'https://www.habitro.com/database/habitro-database.php'; // PHP API URL
 
   constructor(private http: HttpClient) { }
 

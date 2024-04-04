@@ -13,9 +13,9 @@ background-position: center;" >
                         <li>
                             <a href="{{ company[6].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/instagram.png" width="32px" /></a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="{{ company[7].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/linkedin.png" width="32px" /></a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="{{ company[8].content }}" target="_blank"><img class="social-icon" src="assets/images/icons/youtube.png" width="32px" /></a>
                         </li>
@@ -43,8 +43,20 @@ background-position: center;" >
                             <h6 class="s-17 w-700" data-aos="zoom-in" data-aos-easing="linear" >Service</h6>
         
                             <ul class="foo-links clearfix">
-                                <li data-aos="zoom-in" data-aos-easing="linear"  *ngFor="let menu of menu">
-                                    <p><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;<a href="{{ menu.slug }}">{{ menu.menu}}</a></p>
+                                <li data-aos="zoom-in" data-aos-easing="linear">
+                                    <p><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;<a href="residential">Residential</a></p>
+                                </li>
+                                <li>
+                                    <p><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;<a href="commercial">Commercial</a></p>
+                                </li>
+                                <li>
+                                    <p><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;<a href="construction">Construction</a></p>
+                                </li>
+                                <li>
+                                    <p><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;<a href="renovation">Renovation</a></p>
+                                </li>
+                                <li>
+                                    <p><i class="fa-solid fa-angle-right"></i>&nbsp;&nbsp;<a href="gallery-wall">Gallery Wall</a></p>
                                 </li>
                             </ul>
                         </div>        

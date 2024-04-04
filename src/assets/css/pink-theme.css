@@ -6708,9 +6708,9 @@ p.rbox-2-txt span {
 /*------------------------------------------*/
 
 .pricing-features li {
-  padding: 10px 18px !important;
-  border-bottom: 1px solid #7851a92e  !important;
-  list-style-type: disclosure-closed !important;
+  padding: 10px 5px !important;
+  border-bottom: 1px solid #7851a92e !important;
+  list-style-type: disc !important;
 }
 
 
