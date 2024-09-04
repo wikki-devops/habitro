@@ -1,0 +1,100 @@
+<header>
+
+    <nav class="navbar navbar-expand-lg header-light bg-black header-reverse glass-effect">
+        <div class="container-fluid">
+            <div class="col-auto col-lg-2 me-lg-0 me-auto">
+                <a class="navbar-brand" href="home">
+                    <img src="assets/images/logo.png" data-at2x="assets/images/logo.png" alt class="default-logo">
+                    <img src="assets/images/logo.png" data-at2x="assets/images/logo.png" alt class="alt-logo">
+                    <img src="assets/images/logo.png" data-at2x="assets/images/logo.png" alt class="mobile-logo">
+                </a>
+            </div>
+            <div class="col-auto ms-auto md-ms-0 menu-order position-static">
+                <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                    <span class="navbar-toggler-line"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav alt-font bg-black">
+                        <li class="nav-item"><a href="home" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="about" class="nav-link">About us</a></li>
+                        <li class="nav-item"><a href="ongoing-project" class="nav-link">Ongoing Project</a></li>
+                        <li class="nav-item"><a href="reason-to-buy" class="nav-link">Reasons to Buy?</a></li>
+                        <li class="nav-item"><a href="floorplan" class="nav-link">Floorplan</a></li>
+                        <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-auto text-end d-none d-sm-flex">
+                <div class="header-icon">
+                    <div class="header-button">
+                        <a href="tel:+91 94455 32961" class="btn btn-medium left-icon btn-switch-text text-base-color">
+                            <span>
+                                <span><i class="fa-solid fa-phone-volume text-base-color"></i></span>
+                                <span class="btn-double-text fs-18" data-text="+91 94455 32961">+91 94455 32961</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-auto text-end d-none d-sm-flex">
+                <div class="header-icon">
+                    <div class="header-button">
+                        <a href="#modal-popup3"
+                            class="btn border-1 btn-transparent-light-gray btn-medium left-icon btn-switch-text text-white">
+                            <span>
+                                <span><i class="fa-solid fa-file"></i></span>
+                                <span class="btn-double-text" data-text="Download Brochure">Download Brochure </span>
+                            </span>
+                        </a>
+                        <div id="modal-popup3"
+                            class="zoom-anim-dialog contact-form-style-01 mfp-hide col-xl-6 col-lg-6 col-md-6 col-11 mx-auto bg-white text-center modal-popup-main p-50px">
+                            <span class="text-dark-gray fw-600 fs-24 mb-20px d-block">How we can help you?</span>
+                            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                                <div class="position-relative form-group mb-20px">
+                                    <span class="form-icon"><i class="bi bi-emoji-smile"></i></span>
+                                    <input type="text" formControlName="name" class="form-control required"
+                                        placeholder="Enter your name*" />
+                                    <div *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)"
+                                        class="text-danger">
+                                    </div>
+                                </div>
+
+                                <div class="position-relative form-group mb-20px">
+                                    <span class="form-icon"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" formControlName="email" class="form-control required"
+                                        placeholder="Enter your email*" />
+                                    <div *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)"
+                                        class="text-danger">
+                                    </div>
+                                </div>
+
+                                <div class="position-relative form-group mb-20px">
+                                    <span class="form-icon"><i class="bi bi-telephone-outbound"></i></span>
+                                    <input type="tel" formControlName="phone" class="form-control required"
+                                        placeholder="Enter your phone" />
+                                    <div *ngIf="contactForm.get('phone')?.invalid && (contactForm.get('phone')?.dirty || contactForm.get('phone')?.touched)"
+                                        class="text-danger">
+                                    </div>
+                                </div>
+
+                                <div class="position-relative form-group form-textarea">
+                                    <input type="hidden" name="redirect" value />
+                                    <button
+                                        class="btn btn-medium btn-dark-gray btn-box-shadow btn-round-edge w-100 mt-20px"
+                                        type="submit" [disabled]="!contactForm.valid">
+                                        Download Brochure
+                                    </button>
+                                    <div class="form-results mt-20px d-none"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

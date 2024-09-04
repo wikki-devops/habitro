@@ -1,0 +1,7 @@
+.text-highlight {
+    position: relative;
+    z-index: 1;
+}
+.btn.btn-switch-text.btn-medium > span {
+    padding: 0px;
+}

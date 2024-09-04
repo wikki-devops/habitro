@@ -1,0 +1,25 @@
+li.nav-item {
+    color: var(--base-color);
+}
+
+.feature-box-icon {
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.feature-box-icon:hover {
+    padding: 15px;
+}
+
+.p-8 {
+    padding: 18%;
+}
+
+.bg-gradient-flamingo-amethyst-green {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 43%, rgba(195, 165, 92, 1) 100%);
+
+}
+

@@ -1,0 +1,25 @@
+<app-breadcum [pageTitle]="pageTitle"></app-breadcum>
+<section class="bg-very-light-gray pt-70px pb-70px">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-xl-1 row-cols-md-1 justify-content-center"
+            data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            <div class="col mb-30px" *ngFor="let item of floorplan">
+                <div class="border-radius-30px overflow-hidden box-shadow-large">
+                    <div class="image position-relative">
+                        <img src="assets/images/gallery/{{item.image}}" class="w-100" alt />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-xl-2 row-cols-md-2 justify-content-center"
+            data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+            <div class="col mb-30px" *ngFor="let item of gallery">
+                <div class="border-radius-30px overflow-hidden box-shadow-large">
+                    <div class="image position-relative">
+                        <img src="assets/images/gallery/{{item.image}}" class="w-100" alt />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

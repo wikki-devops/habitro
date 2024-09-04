@@ -1,0 +1,10 @@
+.feature-box-icon {
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+.feature-box-icon:hover {
+    padding: 15px;
+}

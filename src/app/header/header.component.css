@@ -1,0 +1,41 @@
+.header-light .navbar-nav .nav-link:hover {
+    color: var(--base-color) !important;
+}
+
+.header-light .navbar-nav .nav-link:active {
+    color: var(--base-color) !important;
+}
+
+.navbar .navbar-nav .nav-item:hover .nav-link,
+.navbar .navbar-nav .nav-item.active .nav-link {
+    opacity: 1;
+}
+
+.header-light .navbar-nav .nav-link {
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+header .navbar-brand img {
+    max-height: 84px;
+}
+
+.center-logo .navbar-nav .nav-link {
+    padding: 38px 16px !important;
+}
+
+header.sticky.sticky-active .header-reverse.glass-effect {
+    background-color: black !important;
+}
+
+.btn:hover {
+    color: var(--base-color) !important;
+}
+.navbar .navbar-nav .nav-link {
+    padding: 12px;
+    font-size: 17px;
+}
+.btn.btn-switch-text.btn-medium > span {
+    padding: 10px;
+}
